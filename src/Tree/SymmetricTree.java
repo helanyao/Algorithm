@@ -18,16 +18,27 @@ public class SymmetricTree {
 	}
 	
 	public static boolean isSymmetric(BNode root) {
-        if(root==null) return true;
+        if(root==null) {
+        	return true;
+        }
         return isSym(root.left,root.right);
     }
 	
     public static boolean isSym(BNode left,BNode right){
-    	if(left==null && right==null) return true;
-    	if(left!=null && right==null) return false;
-    	if(left==null && right!=null) return false;
-    	if(left.value!=right.value) return false;
-    	else return isSym(left.right,right.left)&&isSym(left.left,right.right);
+    	if(left==null && right==null) {
+    		return true;
+    	}
+    	if(left!=null && right==null) {
+    		return false;
+    	}
+    	if(left==null && right!=null) {
+    		return false;
+    	}
+    	if(left.val != right.val) {
+    		return false;
+    	} else {
+    		return isSym(left.right,right.left)&&isSym(left.left,right.right);
+    	}
     }
     
     public boolean isSymmetricN(BNode root) {
@@ -43,7 +54,7 @@ public class SymmetricTree {
             if(left==null && right==null){  
                 continue;  
             }  
-            if(left==null || right==null || left.value!=right.value){  
+            if(left==null || right==null || left.val != right.val) {  
                 return false;  
             }  
             ql.offer(left.left);  
