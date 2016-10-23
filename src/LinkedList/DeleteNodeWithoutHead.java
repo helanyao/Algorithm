@@ -26,6 +26,7 @@ public class DeleteNodeWithoutHead {
 		ll.printAll();
 	}
 	
+	// test case: [1, 2, 3] remove 2; [1, 2] remove 1;
     public static void deleteNode(Node node) {
     	Node pre = null, p = node, q = node.next;
         while(q != null) {
