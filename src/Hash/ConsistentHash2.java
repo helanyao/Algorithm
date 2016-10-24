@@ -92,7 +92,6 @@ public class ConsistentHash2 {
         }
         
         ArrayList<Integer> machine = new ArrayList<Integer>(microShards + 1);
-        // ArrayList<Integer> machine2 = new ArrayList<Integer>(microShards); // only for lintcode
         Random ra =new Random();
         for(int i = 0; i < microShards; i++) {
         	int index = ra.nextInt(cycleLen);
@@ -104,13 +103,11 @@ public class ConsistentHash2 {
         	}
         	nodeStatus.add(index);
         	machine.add(i, index);
-        	// machine2.add(i, index);
         }
         machine.add(machine_id); // in the last position, it sets the machine id
         machines.add(machine);
         
         return machine;
-        // return machine2;
     }
 
     // @param hashcode an integer
