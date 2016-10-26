@@ -1,7 +1,6 @@
 package Search;
 
 public class InsertionSearch {
-
 	public static void main(String[] args) {
 		int[] a = new int[]{1, 2, 3, 4};
 		System.out.println(search(a, 0, a.length - 1, 2));
