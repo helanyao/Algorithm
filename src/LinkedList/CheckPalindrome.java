@@ -1,12 +1,12 @@
 package LinkedList;
 
 import SingleLinkedList.LinkedList;
-import SingleLinkedList.ListNode;
+import SingleLinkedList.Node;
 
 public class CheckPalindrome {
 
 	public static void main(String[] args) {
-		ListNode n1 = new ListNode(0);
+		Node n1 = new Node(0);
 		LinkedList ll = new LinkedList(n1);
 		ll.add(1);
 		ll.add(3);
@@ -17,14 +17,14 @@ public class CheckPalindrome {
 	}
 	
 	// Time: O(n), Space: O(1)
-	public boolean isPalindrome(ListNode head) {
+	public boolean isPalindrome(Node head) {
 		if(head == null) {
 			return true;
 		}
 		
-		ListNode middle = findMiddle(head);
+		Node middle = findMiddle(head);
 		middle.next = reverseList(middle.next);
-		ListNode p1 = head, p2 = middle.next;
+		Node p1 = head, p2 = middle.next;
 		while(p1 != null && p2 != null) {
 			if(p1.val != p2.val) {
 				return false;
@@ -37,12 +37,12 @@ public class CheckPalindrome {
 		return true;
 	}
 	
-	public ListNode findMiddle(ListNode head) {
+	public Node findMiddle(Node head) {
 		if(head == null) {
 			return null;
 		}
 		
-		ListNode slow = head, fast = head.next;
+		Node slow = head, fast = head.next;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
@@ -51,8 +51,8 @@ public class CheckPalindrome {
         return slow;
 	}
 	
-	public ListNode reverseList(ListNode head) {
-		ListNode newH = null, cur = head, next = null;
+	public Node reverseList(Node head) {
+		Node newH = null, cur = head, next = null;
 		
 		while(cur != null) {
 			next = cur.next;
