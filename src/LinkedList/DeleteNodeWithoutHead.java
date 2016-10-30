@@ -1,7 +1,7 @@
 package LinkedList;
 
 import SingleLinkedList.LinkedList;
-import SingleLinkedList.Node;
+import SingleLinkedList.ListNode;
 
 /*
  * Write a function to delete a node (except the tail) in a singly linked list, 
@@ -15,20 +15,20 @@ import SingleLinkedList.Node;
 
 public class DeleteNodeWithoutHead {
 	public static void main(String[] args) {
-		Node n1 = new Node(0);
+		ListNode n1 = new ListNode(0);
 		LinkedList ll = new LinkedList(n1);
 		ll.add(1);
 		ll.add(2);
 		//ll.add(3);
 		ll.printAll();
-		Node n = ll.head.next;
+		ListNode n = ll.head.next;
 		deleteNode(n);
 		ll.printAll();
 	}
 	
 	// test case: [1, 2, 3] remove 2; [1, 2] remove 1;
-    public static void deleteNode(Node node) {
-    	Node pre = null, p = node, q = node.next;
+    public static void deleteNode(ListNode node) {
+    	ListNode pre = null, p = node, q = node.next;
         while(q != null) {
             p.val = q.val;
             pre = p;
