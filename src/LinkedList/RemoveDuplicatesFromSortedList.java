@@ -1,11 +1,11 @@
 package LinkedList;
 
 import SingleLinkedList.LinkedList;
-import SingleLinkedList.Node;
+import SingleLinkedList.ListNode;
 
 public class RemoveDuplicatesFromSortedList {
 	public static void main(String[] args) {
-		Node n1 = new Node(0);
+		ListNode n1 = new ListNode(0);
 		LinkedList ll = new LinkedList(n1);
 		ll.add(0);
 		ll.add(0);
@@ -15,12 +15,12 @@ public class RemoveDuplicatesFromSortedList {
 		ll.printAll();
 	}
 	
-    public static Node deleteDuplicates(Node head) {
-    	Node dummy = new Node();
+    public static ListNode deleteDuplicates(ListNode head) {
+    	ListNode dummy = new ListNode();
 		dummy.next = head;
 		
 		while(head != null) {
-			Node n = head.next;
+			ListNode n = head.next;
 			if(n != null && n.val == head.val) {
 				head.next = n.next;
 				n.next = null;

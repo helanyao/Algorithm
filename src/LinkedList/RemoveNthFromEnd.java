@@ -1,7 +1,7 @@
 package LinkedList;
 
 import SingleLinkedList.LinkedList;
-import SingleLinkedList.Node;
+import SingleLinkedList.ListNode;
 
 /*
  * Given a linked list, remove the nth node from the end of list and return its head.
@@ -13,7 +13,7 @@ import SingleLinkedList.Node;
 
 public class RemoveNthFromEnd {
 	public static void main(String[] args) {
-		Node n1 = new Node(0);
+		ListNode n1 = new ListNode(0);
 		LinkedList ll = new LinkedList(n1);
 		//ll.add(1);
 		//ll.add(3);
@@ -22,12 +22,12 @@ public class RemoveNthFromEnd {
 		ll.printAll();
 	}
 	
-	public static Node removeEnd(Node head, int n) {
+	public static ListNode removeEnd(ListNode head, int n) {
 		if(n <= 0 || head == null) {
 			return head;
 		}
 		
-		Node pre = null, p = head, q = head;
+		ListNode pre = null, p = head, q = head;
 		
 		for(int i = 0; i < n - 1; i++) {
 			if(q == null) {
