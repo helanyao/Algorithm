@@ -1,14 +1,14 @@
 package LinkedList;
 
-import SingleLinkedList.ListNode;
+import SingleLinkedList.Node;
 
 public class ReverseList {
-	public ListNode reverseListN(ListNode head) {
-		ListNode dummy = new ListNode();
+	public Node reverseListN(Node head) {
+        Node dummy = new Node();
         dummy.next = null;
         
         while(head != null) {
-        	ListNode next = head.next;
+            Node next = head.next;
             head.next = dummy.next;
             dummy.next = head;
             head = next;
@@ -17,18 +17,18 @@ public class ReverseList {
         return dummy.next;
 	}
 	
-	public ListNode reverseList(ListNode head, ListNode pre) {
+	public Node reverseList(Node head, Node pre) {
 		if(head == null) {
 			return pre;
 		}
 		
-		ListNode next = head.getNext();
+		Node next = head.getNext();
 		head.setNext(pre);
 		
 		return reverseList(next, head);
 	}
 	
-	public void reversePrint(ListNode head) {
+	public void reversePrint(Node head) {
 		  if(head == null){
 		      return;
 		  } else{

@@ -1,11 +1,11 @@
 package Sort;
 
 import SingleLinkedList.LinkedList;
-import SingleLinkedList.ListNode;
+import SingleLinkedList.Node;
 
 public class SortLinkedList {
 	public static void main(String[] args) {
-		ListNode n1 = new ListNode(3);
+		Node n1 = new Node(3);
 		LinkedList L = new LinkedList(n1);
 		L.add(0);
 		L.add(1);
@@ -16,7 +16,7 @@ public class SortLinkedList {
 	}
 	
 	public static LinkedList OrderLinkedList(LinkedList L){
-		ListNode tmpH = null, cur = L.getHead();
+		Node tmpH = null, cur = L.getHead();
 		LinkedList tmpL = new LinkedList(tmpH);
 		while(cur != null){
 			OrderInsertList(tmpL, cur.getValue());
@@ -27,8 +27,8 @@ public class SortLinkedList {
 	}
 	
 	public static void OrderInsertList(LinkedList L, int item){
-		ListNode newN = new ListNode(item);
-		ListNode prev = null, cur = L.getHead();
+	    Node newN = new Node(item);
+	    Node prev = null, cur = L.getHead();
 
 	    while(cur != null){
 	        if(cur.getValue() > item){
