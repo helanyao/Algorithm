@@ -1,4 +1,6 @@
-package Tree;
+package BTreeRecrusive;
+
+import BinaryTree.BNode;
 
 /*
  * Given a binary tree, determine if it is height-balanced.
@@ -8,11 +10,11 @@ package Tree;
  */
 public class isBalancedTree {
 	// Version 1: using ResultType
-    public boolean isBalanced1(TreeNode root) {
+    public boolean isBalanced1(BNode root) {
         return helper(root).isBalanced;
     }
     
-    private ResultType helper(TreeNode root) {
+    private ResultType helper(BNode root) {
         if (root == null) {
             return new ResultType(true, 0);
         }
@@ -34,11 +36,11 @@ public class isBalancedTree {
     }
     
     // Version 2: without ResultType
-    public boolean isBalanced2(TreeNode root) {
+    public boolean isBalanced2(BNode root) {
         return maxDepth(root) != -1;
     }
 
-    private int maxDepth(TreeNode root) {
+    private int maxDepth(BNode root) {
         if (root == null) {
             return 0;
         }
