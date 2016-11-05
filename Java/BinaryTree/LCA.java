@@ -1,7 +1,6 @@
 package BinaryTree;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Stack;
 import BinaryTree.BNode;
 import BinaryTree.BTree;

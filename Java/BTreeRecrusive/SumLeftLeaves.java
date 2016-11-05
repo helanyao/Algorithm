@@ -26,7 +26,7 @@ public class SumLeftLeaves {
             return 0;
         } 
         
-        int result = 0, temp;
+        int result = 0;
         Stack<TreeNode> s = new Stack<TreeNode>();
 		TreeNode p = root;
 		boolean right = false;
