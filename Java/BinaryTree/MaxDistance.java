@@ -52,13 +52,21 @@ public class MaxDistance {
 	}
 	
 	/**
-	 *  
+	 *   test case 1:
 	 *       1
 	 *     /   \
 	 *    2      3
 	 *   / \    /
 	 *  4   5  6
 	 *  
+	 *  test case 2:
+	 *        1
+	 *       /  
+	 *      2
+	 *     /
+	 *    3
+	 *   / \
+	 *  4   5
 	 */
 	private static BNode create() {
 		BNode root = new BNode(1, 4);
