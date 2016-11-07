@@ -1,4 +1,4 @@
-package BTreeRecrusive;
+package BinaryTree;
 
 import java.util.ArrayList;
 import BinaryTree.BNode;

@@ -1,4 +1,4 @@
-package BTreeRecrusive;
+package BinaryTree;
 
 // In a full binary tree, given its pre-order,
 // please calculate its post-order.
@@ -13,11 +13,11 @@ package BTreeRecrusive;
 
 public class PreOrderToPostOrder {
 	public static void PreToPost(int[] pre, int preLow, int preHigh, int[] post, int postLow, int postHigh) {
-		if(pre == null || post == null) {
+		if (pre == null || post == null) {
 			throw new IllegalArgumentException("Array is null.");
 		}
 		
-		if(preHigh >= preLow) {
+		if (preHigh >= preLow) {
 			post[postHigh] = pre[preLow];
 			int half = (preHigh - preLow) / 2;
 			// left child tree
