@@ -45,34 +45,13 @@ public class NodeSumAtSpecificLevel {
 	}
 	
 	public static int getNodeNum(BNode root, int level) {
-		if (root == null || level < 1) {
-			return -1;
-		}
-		
-		List<List<BNode>> levelNodes = new ArrayList<List<BNode>>();
-		getNodeNumHelper(root, level, 1, levelNodes);
-		
-		return levelNodes.get(level - 1).size();
+        if (root == null || level <= 0) {
+            return 0;
+        } else if (level == 1) {
+            return 1;
+        }
+        
+        // 将左子树及右子树在K层的节点个数相加.
+        return getNodeNum(root.left, level - 1) + getNodeNum(root.right, level - 1);
 	}
-	
-	private static void getNodeNumHelper(BNode root, int level, int curLevel, List<List<BNode>> levelNodes) {
-		if (root == null || level < curLevel) {
-			return;
-		} 
-		
-		List<BNode> nodes = null;
-		if (curLevel > levelNodes.size()) {
-			nodes = new ArrayList<BNode>();
-			levelNodes.add(nodes);
-		} else {
-			nodes = levelNodes.get(curLevel - 1);
-		}
-		
-		nodes.add(root);
-		
-		getNodeNumHelper(root.left, level, curLevel + 1, levelNodes);
-		getNodeNumHelper(root.right, level, curLevel + 1, levelNodes);
-		
-	}
-	
 }
