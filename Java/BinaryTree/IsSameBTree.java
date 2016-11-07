@@ -5,8 +5,7 @@ import java.util.Stack;
 /**
  *  check whether BTree B is same with BTree A
  */
-public class IsSameTree {
-
+public class IsSameBTree {
 	public static void main(String[] args) {
 		String[] init1 = new String[]{"1", "[", "2", "[", "5", ",", "]", "]"};	
 		String[] init2 = new String[]{"1", "[", "2", "[", "4", ",", "]", "]"};	
