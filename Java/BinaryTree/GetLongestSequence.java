@@ -5,7 +5,7 @@ package BinaryTree;
  *  即全部往左的连续节点，或是全部往右的连续节点
  */
 
-public class LongestSequence {
+public class GetLongestSequence {
 	
 	// For node n, firstly get the length for path1 and path2
 	// where path1 stands for the length of sequence when only traveling in left from n

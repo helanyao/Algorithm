@@ -1,4 +1,5 @@
 package BitManipulation;
+
 //Given a base-10 integer, n, convert it to binary (base-2). 
 //Then find and print the base-10 integer denoting the maximum number of consecutive 1's in n's binary representation.
 //Sample Input 13
@@ -6,7 +7,7 @@ package BitManipulation;
 //The binary representation of 13 is 1101, so the maximum number of consecutive 1's is 2.
 
 
-public class BinaryNumber {
+public class RegularNum2BinaryNum {
 
 	public static void main(String[] args) {
 		int n = 13, count = 0, max = 0;
@@ -23,10 +24,5 @@ public class BinaryNumber {
 		}
 		
 		System.out.println(max);
-	
-
 	}
-	
-	
-
 }

@@ -1,11 +1,9 @@
 package BinaryTree;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
-public class NodeSumAtSpecificLevel {
+public class GetNodeNumAtLevelK {
 
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	

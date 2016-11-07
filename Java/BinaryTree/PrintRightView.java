@@ -7,7 +7,7 @@ import java.util.Queue;
 import BinaryTree.BNode;
 import BinaryTree.BTree;
 
-public class RightView {
+public class PrintRightView {
 
 	public static void main(String[] args) {
 		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	

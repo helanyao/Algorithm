@@ -3,11 +3,11 @@ package BinaryTree;
 import java.util.ArrayList;
 import BinaryTree.BNode;
 
-public class CheckBinarySearchTree {
+public class IsBinarySearchTree {
 	BNode root;
 	
 	public static void main(String args[]){
-		CheckBinarySearchTree tree = new CheckBinarySearchTree();
+		IsBinarySearchTree tree = new IsBinarySearchTree();
         tree.root = new BNode(4);
         tree.root.left = new BNode(2);
         tree.root.right = new BNode(5);

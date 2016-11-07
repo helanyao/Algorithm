@@ -2,8 +2,7 @@ package BinaryTree;
 
 import java.util.Stack;
 
-// get the number of nodes
-public class NodeNum {
+public class GetNodeNum {
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};
 		BTree bt = new BTree(init);

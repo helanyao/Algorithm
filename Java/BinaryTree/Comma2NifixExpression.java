@@ -16,7 +16,7 @@ class NENode{
 	public NENode right;
 }
 
-public class NifixExpression {
+public class Comma2NifixExpression {
 	// Check the priority order of operation
 	public static int precede(String op1, String op2) {
 		if(!op1.equals("+") && !op1.equals("-") && !op1.equals("*") && !op1.equals("/")) {

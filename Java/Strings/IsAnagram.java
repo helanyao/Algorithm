@@ -3,7 +3,7 @@ package Strings;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Anagram {
+public class IsAnagram {
 
 	public static void main(String[] args) {
 		String s1 = "我爱巴黎";

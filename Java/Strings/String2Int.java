@@ -1,6 +1,6 @@
 package Strings;
 
-public class StringToInt {
+public class String2Int {
 	public int myAtoi(String str) {
         if(str == null || str.length() == 0) {
             return 0;

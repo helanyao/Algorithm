@@ -1,4 +1,4 @@
-package BTreeRecrusive;
+package BinaryTree;
 
 import BinaryTree.BNode;
 

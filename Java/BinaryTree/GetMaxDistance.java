@@ -1,6 +1,6 @@
 package BinaryTree;
 
-public class MaxDistance {
+public class GetMaxDistance {
 
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "]"};	

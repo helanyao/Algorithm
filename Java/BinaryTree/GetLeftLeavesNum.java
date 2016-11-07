@@ -1,9 +1,9 @@
-package BTreeRecrusive;
+package BinaryTree;
 
 import java.util.Stack;
 
 /*
-Find the sum of all left leaves in a given binary tree.
+Get the sum of all left leaves in a given binary tree.
 
 Example:
     3
@@ -15,11 +15,7 @@ Example:
 There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.
 */
 
-public class SumLeftLeaves {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+public class GetLeftLeavesNum {
 	
 	public int sumOfLeftLeaves(TreeNode root) {
         if(root == null || (root.left == null && root.right == null)) {

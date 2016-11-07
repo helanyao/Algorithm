@@ -6,7 +6,7 @@ import java.util.Stack;
 import BinaryTree.BNode;
 import BinaryTree.BTree;
 
-public class PathFromLeafToRoot {
+public class GetPathFromLeafToRoot {
 	public static void main(String [] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};		
 		BTree bt = new BTree(init);

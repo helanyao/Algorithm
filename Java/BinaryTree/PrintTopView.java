@@ -5,7 +5,7 @@ import java.util.Stack;
 import BinaryTree.BNode;
 import BinaryTree.BTree;
 
-public class TopView {
+public class PrintTopView {
 
 	public static void main(String[] args) {
 		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	

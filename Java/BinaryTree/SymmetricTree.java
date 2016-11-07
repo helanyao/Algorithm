@@ -1,4 +1,4 @@
-package BTreeRecrusive;
+package BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
