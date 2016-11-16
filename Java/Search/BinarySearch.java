@@ -2,10 +2,11 @@ package Search;
 
 public class BinarySearch {
 	public static void main(String[] args) {
-		int[] a = new int[]{1, 2};
-		int key = 2;
+		int[] a = new int[]{1, 2, 2, 4, 5, 5};
+		int key = 5;
 		System.out.println(findPosition(a, key));
 		System.out.println(searchN(a, key));
+		System.out.println(search9(a, key));
 	}
 	
     /**
@@ -48,6 +49,7 @@ public class BinarySearch {
 		int low = 0, high = nums.length - 1, mid;
 		
         while (low <= high) {
+        	System.out.println(low + " " + high);
             mid = (low + high) / 2;
             if (nums[low] == target) {
                 return low;
@@ -63,8 +65,35 @@ public class BinarySearch {
                 high = mid - 1;
             }
         }
-		
+        System.out.println(low + " " + high);
 		return -1;
 	}
+	
+	 public static int search9(int[] nums, int target) {
+	        if (nums == null || nums.length == 0) {
+	            return -1;
+	        }
+	        
+	        int start = 0, end = nums.length - 1;
+	        while (start + 1 < end) {
+	        	System.out.println(start + " " + end);
+	            int mid = (start + end) / 2;
+	            if (nums[mid] == target) {
+	                return mid;
+	            } else if (nums[mid] < target) {
+	                start = mid;
+	            } else {
+	                end = mid;
+	            }
+	        }
+	        System.out.println(start + " " + end);
+	        if (nums[start] == target) {
+	            return start;
+	        }
+	        if (nums[end] == target) {
+	            return end;
+	        }
+	        return -1;
+	    }
 
 }
