@@ -77,7 +77,7 @@ public class BinarySearch {
 	        int start = 0, end = nums.length - 1;
 	        while (start + 1 < end) {
 	        	System.out.println(start + " " + end);
-	            int mid = (start + end) / 2;
+	            int mid = (end - start) / 2 + start; // (end + start)/2 may exceed the max of int
 	            if (nums[mid] == target) {
 	                return mid;
 	            } else if (nums[mid] < target) {
@@ -87,13 +87,14 @@ public class BinarySearch {
 	            }
 	        }
 	        System.out.println(start + " " + end);
+	        
 	        if (nums[start] == target) {
 	            return start;
-	        }
-	        if (nums[end] == target) {
+	        } else if (nums[end] == target) {
 	            return end;
+	        } else {
+	        	return -1;
 	        }
-	        return -1;
 	    }
 
 }
