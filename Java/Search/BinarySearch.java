@@ -2,7 +2,7 @@ package Search;
 
 public class BinarySearch {
 	public static void main(String[] args) {
-		int[] a = new int[]{1, 2, 2, 4, 5, 5};
+		int[] a = new int[]{1, 2, 2, 4, 6, 7};
 		int key = 5;
 		System.out.println(findPosition(a, key));
 		System.out.println(searchN(a, key));
