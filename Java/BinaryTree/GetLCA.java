@@ -17,17 +17,15 @@ public class GetLCA {
 	}
 	
 	public static BNode getLCA(BNode root, int i, int j) {
-		if(root == null) {
-			return null;
-		}
-		
-		if(root.getVal() == i || root.getVal() == j) {
+		if(root == null || root.getVal() == i || root.getVal() == j) {
 			return root;
 		}
 		
-		BNode left = getLCA(root.getLeft(), i , j);
-		BNode right = getLCA(root.getRight(), i ,j);
+		// Divide
+		BNode left = getLCA(root.getLeft(), i, j);
+		BNode right = getLCA(root.getRight(), i, j);
 		
+		// Conquer
 		if(left == null) {
 			return right;
 		}
