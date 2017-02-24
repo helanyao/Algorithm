@@ -2,6 +2,7 @@
 This repository is to implement some interesting algorithms in Java/Go. Most exercises come from [LeetCode](https://leetcode.com/) and [LintCode](http://www.lintcode.com/)
 
 It focuses on following topics:
+
 1. Arrays
 2. Binary Tree
 3. Bit Manipulation
