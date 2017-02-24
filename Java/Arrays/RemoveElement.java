@@ -15,9 +15,9 @@ package Arrays;
 public class RemoveElement {
 	// test case: nums = [1], val = 1
 	public static void main(String[] args) {
-		int[] nums = new int[]{3};
+		int[] nums = new int[]{3, 2, 2, 3};
 		int len1 = removeElement1(nums, 3);
-		System.out.println(len1);
+		System.out.println("\n" + len1);
 		int len2 = removeElement2(nums, 3);
 		System.out.println(len2);
 //		for (int i = 0; i < len; i++) {
@@ -26,8 +26,7 @@ public class RemoveElement {
 	}
 	
     public static int removeElement1(int[] A, int elem) {
-        int i = 0;
-        int pointer = A.length - 1;
+        int i = 0, pointer = A.length - 1;
         while(i <= pointer){
             if(A[i] == elem){
                 A[i] = A[pointer];
@@ -36,6 +35,9 @@ public class RemoveElement {
                 i++;
             }
         }
+        
+        for (int j = 0; j < pointer + 1; j++)
+        	System.out.print(A[j]);
         
         return pointer + 1;
     }

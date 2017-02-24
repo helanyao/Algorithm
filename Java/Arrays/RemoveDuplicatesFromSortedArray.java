@@ -14,10 +14,16 @@ package Arrays;
  */
 
 public class RemoveDuplicatesFromSortedArray {
-    public int removeDuplicates(int[] A) {
-        if (A == null || A.length == 0) {
+	public static void main(String[] args) {
+		int[] A = new int[]{1, 3, 1, 1, 2};
+		int size = removeDuplicates(A);
+		for( int i = 0; i < size; i++)
+			System.out.print(A[i]);
+	}
+	
+    public static int removeDuplicates(int[] A) {
+        if (A == null || A.length == 0) 
             return 0;
-        }
         
         int size = 0;
         for (int i = 0; i < A.length; i++) {

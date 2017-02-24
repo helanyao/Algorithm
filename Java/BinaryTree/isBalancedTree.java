@@ -8,7 +8,7 @@ import BinaryTree.BNode;
  * in which the depth of the two subtrees of every node never differ by more than 1.
  * https://leetcode.com/problems/balanced-binary-tree/
  */
-public class IsBalancedTree {
+public class isBalancedTree {
 	// Version 1: using ResultType
     public boolean isBalanced1(BNode root) {
         return helper(root).isBalanced;
