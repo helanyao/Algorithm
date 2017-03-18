@@ -1,6 +1,8 @@
 package search;
 
 /**
+ * @author jinghuaz
+ * 
  * Suppose a sorted array is rotated at some pivot unknown to you beforehand.
  * (i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
  * Given a target value. If found in the array return its index, otherwise return -1.
@@ -10,10 +12,10 @@ package search;
  * For [4, 5, 1, 2, 3] and target=1, return 2.
  * For [4, 5, 1, 2, 3] and target=0, return -1.
  *
- * http://www.lintcode.com/en/problem/search-in-rotated-sorted-array/
+ * Tag: Binary Search, LinkedIn, Uber, Facebook
  */
 
-public class SearchInRotatedSortedArray {
+public class SearchInRotatedSortedArray1 {
 	public static void main(String[] args) {
 		int[] A = new int[]{0,1,2,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1};
 		int key = -9;
@@ -74,5 +76,4 @@ public class SearchInRotatedSortedArray {
             return -1;
         }
     }
-
 }

@@ -8,8 +8,8 @@ package search;
  * 
  * Example: Given [4, 5, 6, 7, 0, 1, 2] return 0
  *
- * http://www.lintcode.com/en/problem/find-minimum-in-rotated-sorted-array/
  */
+
 public class GetMinInRotatedSortedArray {
     /**
      * @param nums: a rotated sorted array
