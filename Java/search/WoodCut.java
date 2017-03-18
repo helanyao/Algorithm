@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 /**
  * Given n pieces of wood with length L[i] (integer array). 

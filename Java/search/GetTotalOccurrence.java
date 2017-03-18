@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 /* Given a target number and an integer array sorted in ascending order. 
  * Find the total number of occurrences of target in the array.

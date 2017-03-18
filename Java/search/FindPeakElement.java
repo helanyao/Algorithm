@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 /**
  * http://www.lintcode.com/en/problem/find-peak-element/

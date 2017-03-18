@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 /*
  *  Given n books and the ith book has A[i] pages. You are given k people to copy the n books.

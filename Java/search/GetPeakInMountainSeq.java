@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 /*
  *  Given a mountain sequence of n integers which increase firstly 

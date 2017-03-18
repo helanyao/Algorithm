@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 public class InsertionSearch {
 	public static void main(String[] args) {

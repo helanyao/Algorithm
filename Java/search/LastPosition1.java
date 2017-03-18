@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 /**
  * 	Find the last position of a target number in a sorted array. 

@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 /**
  * Suppose a sorted array is rotated at some pivot unknown to you beforehand.

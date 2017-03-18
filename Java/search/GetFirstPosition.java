@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 /**
  * For a given sorted array (ascending order) and a target number, 
