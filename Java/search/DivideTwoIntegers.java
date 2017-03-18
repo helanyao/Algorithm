@@ -1,6 +1,8 @@
 package search;
 
-/*
+/**
+ * @author jhzhu@outlook.com
+ * 
  * Divide two integers without using multiplication, division and mod operator.
  * 
  * Example: given dividend = 100 and divisor = 9, return 11.

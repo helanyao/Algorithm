@@ -1,7 +1,7 @@
 package search;
 
 /**
- * @author jinghuaz
+ * @author jhzhu@outlook.com
  *
  * Follow up for Search in Rotated Sorted Array:
  * 1. What if duplicates are allowed?
@@ -15,7 +15,7 @@ package search;
 
 /*
  * This question is not to test binary search. If you could get the worst case ([1, 1,...,1] - 0),
- * then you could hit the answer. Because in that case, it is not able to write a perfect binary search.
+ * then you could hit the answer. Because in that case, it is not able to write a binary search.
  * If employing for to solve it, its time complexity is O(n). So, just go with for.
  */
 public class SearchinRotatedSortedArray2 {

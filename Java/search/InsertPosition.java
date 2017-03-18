@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * @author jhzhu@outlook.com
+ * 
  * Given a sorted array and a target value, 
  * return the index if the target is found. 
  * If not, return the index where it would be if it were inserted in order.
@@ -15,7 +17,6 @@ import java.util.List;
  * [1,3,5,6], 7 → 4
  * [1,3,5,6], 0 → 0
  *
- * http://www.lintcode.com/en/problem/search-insert-position/
  */
 public class InsertPosition {
 	public static void main(String[] args) {
@@ -26,25 +27,22 @@ public class InsertPosition {
 	}
 	
 	public static int findInsertPos(int[] nums, int target) {
-		if (nums == null || nums.length == 0) {
+		if (nums == null || nums.length == 0) 
 			return 0;
-		}
 		
 		List<Integer> range = search(nums, target);
-		if (range.size() == 1) {
+		if (range.size() == 1) 
 			return range.get(0);
-		} else if (range.size() != 2) {
+		else if (range.size() != 2) 
 			return -1; // error
-		}
 		
 		int low = range.get(0), high = range.get(1);
-		if (target < nums[low]) {
+		if (target < nums[low]) 
 			return low;
-		} else if (target > nums[high]) {
+		else if (target > nums[high]) 
 			return high + 1;
-		} else {
+		else 
 			return high;
-		}
 	}
 	
 	// for the return List<Integer>:
@@ -79,30 +77,27 @@ public class InsertPosition {
 	}
 	
 	// A simple and clean algorithm to implement it.
-	// http://www.jiuzhang.com/solutions/search-insert-position/
     public int searchInsert(int[] A, int target) {
-        if (A == null || A.length == 0) {
+        if (A == null || A.length == 0) 
             return 0;
-        }
+  
         int start = 0, end = A.length - 1;
         
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
-            if (A[mid] == target) {
+            if (A[mid] == target) 
                 return mid;
-            } else if (A[mid] < target) {
+            else if (A[mid] < target) 
                 start = mid;
-            } else {
+            else 
                 end = mid;
-            }
         }
         
-        if (A[start] >= target) {
+        if (A[start] >= target) 
             return start;
-        } else if (A[end] >= target) {
+        else if (A[end] >= target) 
             return end;
-        } else {
+        else 
             return end + 1;
-        }
     }
 }

@@ -15,17 +15,15 @@ public class InsertionSearch {
 	// Please note that if the value is not uniform distribution, please employ Binary Search.
 	// Time Complexity: O(log2(log2n))
 	public static int search(int[] arr, int low, int high, int val) {
-		if(arr == null) {
+		if(arr == null) 
 			throw new IllegalArgumentException();
-		}
 		
-		int mid = low+(val-arr[low])/(arr[high]-arr[low])*(high-low);
-	    if(arr[mid] == val) {
+		int mid = low + (val - arr[low]) / (arr[high] - arr[low]) * (high - low);
+	    if(arr[mid] == val) 
 	    	return mid;
-	    } else if(arr[mid] > val) {
+	    else if(arr[mid] > val) 
 	    	return search(arr, low, mid - 1, val);
-	    } else {
-	    	return search(arr, mid + 1, high, val);
-	    }     
+	    else 
+	    	return search(arr, mid + 1, high, val);  
 	}
 }

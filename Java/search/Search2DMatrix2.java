@@ -1,6 +1,8 @@
 package search;
 
 /**
+ * @author jhzhu@outlook.com
+ * 
  * Searche for a value in an m x n matrix, return the occurrence of it.
  * 
  * This matrix has the following properties:
@@ -92,5 +94,4 @@ public class Search2DMatrix2 {
 		else
 			return false;
 	}
-
 }

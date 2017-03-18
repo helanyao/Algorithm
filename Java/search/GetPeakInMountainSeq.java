@@ -1,6 +1,7 @@
 package search;
 
-/*
+/**
+ *  @author jhzhu@outlook.com 
  *  Given a mountain sequence of n integers which increase firstly 
  *  and then decrease, find the mountain top.
  *  

@@ -1,7 +1,7 @@
 package search;
 
 /**
- * http://www.lintcode.com/en/problem/find-peak-element/
+ * @author jhzhu@outlook.com
  * 
  * There is an integer array which has the following features:
  * (1) The numbers in adjacent positions are different.
@@ -13,7 +13,7 @@ package search;
  * Find a peak element in this array. Return the index of the peak.
  * The array may contains multiple peeks, find any of them.
  * 
- * Example
+ * Example:
  * Given [1, 2, 1, 3, 4, 5, 7, 6]
  * Return index 1 (which is number 2) or 6 (which is number 7)
  *
@@ -25,25 +25,21 @@ public class FindPeakElement {
 	}
 	
 	public static int findPeak(int[] nums) {
-		if (nums == null || nums.length < 3) {
+		if (nums == null || nums.length < 3) 
 			return -1;
-		}
 		
 		int low = 1, high = nums.length - 2;
 		while (low + 1 < high) {
 			int mid = low + (high - low) / 2;
-			if (nums[mid] > nums[mid - 1]) { // mid左侧数据呈上峰趋势
+			if (nums[mid] > nums[mid - 1])  // mid左侧数据呈上峰趋势
 				low = mid;
-			} else { // mid左侧数据呈下峰趋势
+			else // mid左侧数据呈下峰趋势
 				high = mid;
-			}
 		}
 		
-		if (nums[low] < nums[high]) {
+		if (nums[low] < nums[high]) 
 			return high;
-		} else {
+		else 
 			return low;
-		}
 	}
-
 }

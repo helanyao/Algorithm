@@ -1,6 +1,9 @@
 package search;
 
-/* Given a target number and an integer array sorted in ascending order. 
+/**
+ * @author jhzhu@outlook.com
+ * 
+ * Given a target number and an integer array sorted in ascending order. 
  * Find the total number of occurrences of target in the array.
  * 
  * Example: given [1, 3, 3, 4, 5] and target = 3, return 2.
@@ -59,9 +62,9 @@ public class GetTotalOccurrence {
         high = mid;
         while (low + 1 < high) {
         	mid1 = (high + low) >> 1;
-        	if (A[mid1] < target)
+        	if (A[mid1] < target) {
         		low = mid1;
-        	else {
+        	} else {
         		high = mid1;
         		start = mid1;
         	}
@@ -74,9 +77,9 @@ public class GetTotalOccurrence {
         high = A.length - 1;
         while (low + 1 < high) {
         	mid2 = (low + high) >> 1;
-        	if (A[mid2] > target)
+        	if (A[mid2] > target) {
         		high = mid2;
-        	else {
+        	} else {
         		low = mid2;
         		end = mid2;
         	}

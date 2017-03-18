@@ -1,11 +1,12 @@
 package search;
 
 
-/*
+/**
+ * @author jhzhu@outlook.com
+ * 
  * Implement int sqrt(int x). Compute and return the square root of x. sqrt(3) = 1
  * 
  * Tag: Binary Search, Math, Facebook
- * 
  */
 
 public class GetSqrt1 {
