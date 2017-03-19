@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 /* 
  *  https://leetcode.com/problems/reverse-integer/?tab=Description

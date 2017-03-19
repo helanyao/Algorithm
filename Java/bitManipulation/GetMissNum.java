@@ -1,4 +1,4 @@
-package BitManipulation;
+package bitManipulation;
 
 /*
  * 很多成对出现数字保存在磁盘文件中，成对的数字不一定是相邻的，

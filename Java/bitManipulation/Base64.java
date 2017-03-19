@@ -1,4 +1,4 @@
-package BitManipulation;
+package bitManipulation;
 
 /*
  * 字符长度为能被3整除时：比如“Tom” ：
