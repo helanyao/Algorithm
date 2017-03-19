@@ -16,7 +16,7 @@ public class SingleNum1 {
      *@param A : an integer array
      *return : an integer 
      */
-   public int singleNumber(int[] A) {
+   public int singleNumberI(int[] A) {
        if (A.length == 0)
            return 0;
            
