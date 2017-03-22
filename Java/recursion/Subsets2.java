@@ -4,30 +4,25 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * 
- * @author jhzhu@outlook.com
  *
  * @Description
- * Given a set of distinct integers, return all possible subsets.
+ * Given a list of numbers that may has duplicate numbers, return all possible subsets
  * Note:
  * 1. Elements in a subset must be in non-descending order.
  * 2. The solution set must not contain duplicate subsets.
  * 
  * @Example
- * If S = [1,2,3], a solution is:
+ * If S = [1,2,2], a solution is:
  * [
- *  [3],
- *  [1],
- *  [2],
- *  [1,2,3],
- *  [1,3],
- *  [2,3],
- *  [1,2],
- *  []
+ *   [2],
+ *   [1],
+ *   [1,2,2],
+ *   [2,2],
+ *   [1,2],
+ *   []
  * ]
  * 
- * @Tag
- * Facebook, Uber, Recursion
+ * @Tag Recursion
  * 
  */
 public class Subsets2 {
@@ -117,16 +112,6 @@ public class Subsets2 {
      *  Recursion version. Like Subset1, we could build similar binary tree. The only difference is
      *  to add one more line (if (i != pos && num[i] == num[i - 1]) continue;), 
      *  which is to skip duplicate number to avoid add duplicate subset.
-     *                         []        
-     *                    /          \        
-     *                   /            \     
-     *                  /              \
-     *               [1]                []
-     *            /       \           /    \
-     *           /         \         /      \          
-     *        [1 2]       [1]       [2]     []
-     *       /     \     /   \     /   \    / \
-     *   [1 2 2] [1 2]  X   [1]  [2 2] [2] X  []
      */
     /**
      * @param nums: A set of numbers.
@@ -157,6 +142,4 @@ public class Subsets2 {
             list.remove(list.size() - 1);
         }
     }
-    
-
 }

@@ -26,8 +26,7 @@ import java.util.Arrays;
  *  []
  * ]
  * 
- * @Tag
- * Facebook, Uber, Recursion
+ * @Tag Facebook, Uber, Recursion
  * 
  */
 public class Subsets1 {
