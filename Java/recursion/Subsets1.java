@@ -32,7 +32,7 @@ import java.util.Arrays;
  */
 public class Subsets1 {
 	public static void main(String[] args) {
-		int[] nums = new int[]{2, 3, 1};
+		int[] nums = new int[]{1, 2, 3};
 		ArrayList<ArrayList<Integer>> result = subsetsN1(nums);
 		for (ArrayList<Integer> v : result)
 			System.out.println(v.toString());
@@ -62,8 +62,7 @@ public class Subsets1 {
         	int size = result.size();
         	for (int j = 0; j < size; j++) {
         		ArrayList<Integer> temp = (ArrayList<Integer>) result.get(j).clone();
-        		value = result.get(j);
-        		value.add(nums[i]);
+        		temp.add(nums[i]);
         		result.add(temp);
         	}
         }
