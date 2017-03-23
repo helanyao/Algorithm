@@ -3,6 +3,8 @@ package BinaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import binaryTree.BNode;
+
 public class GetWidth {
 	public int getWidth(BNode root) {
 		if(root == null) {

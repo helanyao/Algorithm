@@ -1,7 +1,8 @@
 package BinaryTree;
 
 import java.util.ArrayList;
-import BinaryTree.BNode;
+
+import binaryTree.BNode;
 
 public class IsBinarySearchTree {
 	BNode root;

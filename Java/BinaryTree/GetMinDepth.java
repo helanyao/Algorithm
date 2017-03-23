@@ -2,6 +2,8 @@ package BinaryTree;
 
 import java.util.Stack;
 
+import binaryTree.BNode;
+
 public class GetMinDepth {
 	public int minDepth(BNode root) {
         // Corner case. Should never be hit unless the code is

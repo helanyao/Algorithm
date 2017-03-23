@@ -1,5 +1,8 @@
 package BinaryTree;
 
+import binaryTree.BNode;
+import binaryTree.BTree;
+
 public class GetMaxDistance {
 
 	public static void main(String[] args) {

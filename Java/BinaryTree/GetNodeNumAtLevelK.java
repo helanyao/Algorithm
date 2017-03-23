@@ -3,6 +3,9 @@ package BinaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import binaryTree.BNode;
+import binaryTree.BTree;
+
 public class GetNodeNumAtLevelK {
 
 	public static void main(String[] args) {

@@ -3,8 +3,8 @@ package BinaryTree;
 import java.util.Iterator;
 import java.util.Stack;
 
-import BinaryTree.BNode;
-import BinaryTree.BTree;
+import binaryTree.BNode;
+import binaryTree.BTree;
 
 public class GetPathFromLeafToRoot {
 	public static void main(String [] args) {

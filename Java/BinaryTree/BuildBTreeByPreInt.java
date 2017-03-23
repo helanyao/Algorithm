@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import binaryTree.BNode;
+
 public class BuildBTreeByPreInt {
 	BNode buildBTreePreIn(String[] pre, int preSta, int preEnd, String[] in, int inSta, int inEnd) {
 		if ( pre == null || in == null || preSta > preEnd || inSta > inEnd) {

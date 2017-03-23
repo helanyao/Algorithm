@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import binaryTree.BNode;
+
 /**
  *  找出二叉树中最长连续子串
  *  即全部往左的连续节点，或是全部往右的连续节点

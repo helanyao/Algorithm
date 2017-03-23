@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import binaryTree.BNode;
+
 public class GetMaxAndMinVal {
 	int getMaxVal(BNode root) {
 		if(root == null) {

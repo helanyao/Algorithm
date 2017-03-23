@@ -2,8 +2,8 @@ package BinaryTree;
 
 import java.util.Stack;
 
-import BinaryTree.BNode;
-import BinaryTree.BTree;
+import binaryTree.BNode;
+import binaryTree.BTree;
 
 public class PrintTopView {
 

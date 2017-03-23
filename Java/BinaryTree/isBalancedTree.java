@@ -1,6 +1,6 @@
 package BinaryTree;
 
-import BinaryTree.BNode;
+import binaryTree.BNode;
 
 /*
  * Given a binary tree, determine if it is height-balanced.

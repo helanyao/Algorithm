@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
+import binaryTree.BNode;
+
 public class BTreeMirrorCopy {
 
 	public static void main(String[] args) {

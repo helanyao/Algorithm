@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import binaryTree.BNode;
+
 public class BuildBTreeByInPost {
 	BNode buildBTreeInPost(String[] in, int inSta, int inEnd, String[] post, int postSta, int postEnd) {
 		if ( in == null || inSta > inEnd || post == null || postSta > postEnd ) {

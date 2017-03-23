@@ -2,6 +2,9 @@ package BinaryTree;
 
 import java.util.Stack;
 
+import binaryTree.BNode;
+import binaryTree.BTree;
+
 /**
  *  check whether BTree B is same with BTree A
  */

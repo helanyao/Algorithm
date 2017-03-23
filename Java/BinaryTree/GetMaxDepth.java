@@ -4,8 +4,20 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class GetDepth {
+import binaryTree.BNode;
+import binaryTree.BTree;
 
+/**
+ * 
+ * @author jhzhu@outlook.com
+ * 
+ * @Description
+ * The max depth is the number of nodes along the longest path from 
+ * root node down to the farthest leaf node.
+ * 
+ * @Tag Uber, Divide and Conquer, Recursion, Binary Tree
+ */
+public class GetMaxDepth {
 	public static void main(String[] args) {
 		/*   
 		 * init1:
@@ -24,51 +36,49 @@ public class GetDepth {
 	}
 	
 	// The height of a binary tree is the number of edges 
-	// between root and its furthest leaf. 
-	// A null tree has a deepth of 0.
+	// between root and its farthest leaf. 
+	// A null tree has a depth of 0.
+	/**
+     * @param root: The root of binary tree.
+     * @return: An integer.
+     */
 	public static int getDeepth(BNode root) {
-		if (root == null) {
+		if (root == null) 
 			return 0;
-		} else {
+		else 
 			return 1 + Math.max( getDeepth(root.getLeft()), getDeepth(root.getRight()) );
-		}
 	}
 	
 	public static int getDeepthN1(BNode root) {
 		int deepth = 0;
-		if (root == null) {
+		if (root == null) 
 			return deepth;
-		}
+		
 		Stack<BNode> st = new Stack<BNode>();
 		BNode cur = root;
 		
 		while (!st.isEmpty() || cur != null) {
 			while (cur != null) {
 				st.push(cur);
-				if (cur.left != null) {
+				if (cur.left != null) 
 					cur = cur.left;
-				} else {
+				else 
 					cur = cur.right;
-				}
 			}
 			
-			if (st.size() > deepth) {
+			if (st.size() > deepth) 
 				deepth = st.size();
-			}
 			
-			if (!st.isEmpty()) {
+			if (!st.isEmpty()) 
 				cur = st.pop();
-			}
 			
-			while (!st.isEmpty() && st.peek().right == cur) {
+			while (!st.isEmpty() && st.peek().right == cur) 
 				cur = st.pop();
-			}
 			
-			if (!st.isEmpty()) {
+			if (!st.isEmpty()) 
 				cur = st.peek().right;
-			} else {
+			else 
 				cur = null;
-			}
 		}
 		
 		return deepth;
@@ -88,9 +98,9 @@ public class GetDepth {
     */  
 	public static int getDeepthN2(BNode root) {
 		int deepth = 0;
-		if (root == null) {
+		if (root == null) 
 			return deepth;
-		}
+		
 		Queue<BNode> q = new LinkedList<BNode>();
 		BNode dummy = new BNode(), cur;
 		q.offer(root);
@@ -100,19 +110,15 @@ public class GetDepth {
 			cur = q.poll();
 			if (cur == dummy) { // use dummy node to detect the last node of each level
 				deepth++;
-				if (!q.isEmpty()) { // finish BFS, need to exist
+				if (!q.isEmpty())  // finish BFS, need to exist
 					q.offer(dummy);
-				}
 			} 
-			if (cur.left != null) {
+			if (cur.left != null) 
 				q.offer(cur.left);
-			}
-			if (cur.right != null) {
+			if (cur.right != null) 
 				q.offer(cur.right);
-			}
 		}
 		
 		return deepth;
 	}
-
 }
