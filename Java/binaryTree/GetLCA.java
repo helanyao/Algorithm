@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -7,7 +7,6 @@ import binaryTree.BNode;
 import binaryTree.BTree;
 
 /**
- * 
  * @author jinghuaz
  * 
  * @Description
@@ -18,7 +17,7 @@ import binaryTree.BTree;
 public class GetLCA {
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt = new BTree(init);
+		BTree bt = new BTree(init, 1);
 		
 		System.out.println(getLCA(bt.getRoot(), 4, 3).getVal());
 		System.out.println(getLCANonRecru(bt.getRoot(), 4, 3).getVal());

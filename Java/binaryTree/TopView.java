@@ -1,19 +1,19 @@
-package BinaryTree;
+package binaryTree;
 
 import java.util.Stack;
 
 import binaryTree.BNode;
 import binaryTree.BTree;
 
-public class PrintTopView {
+public class TopView {
 
 	public static void main(String[] args) {
 		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt1 = new BTree(init1);
+		BTree bt1 = new BTree(init1, 1);
 		String[] init2 = new String[]{"1"};
-		BTree bt2 = new BTree(init2);
+		BTree bt2 = new BTree(init2, 1);
 		String[] init3 = new String[]{"1", "[", ",", "3", "[", "6", ",", "]", "]"};
-		BTree bt3 = new BTree(init3);
+		BTree bt3 = new BTree(init3, 1);
 		printTopViewN(bt1.getRoot());
 		printTopViewN(null);
 		printTopViewN(bt2.getRoot());
@@ -35,9 +35,8 @@ public class PrintTopView {
 			n = n.getLeft();
 		}
 		
-		while(!st.isEmpty()) {
+		while(!st.isEmpty()) 
 			System.out.print(st.pop().getVal() + " ");
-		}
 		
 		System.out.print(root.getVal() + " ");
 		
@@ -49,8 +48,7 @@ public class PrintTopView {
 		}
 	}
 	
-	public static void top_view(BNode root)
-	{
+	public static void top_view(BNode root) {
 	    if(root != null) {
 	        top_view(root.getLeft(), true);
 	        System.out.print(root.getVal() + " ");

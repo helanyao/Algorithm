@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 import java.util.Stack;
 
@@ -15,7 +15,7 @@ public class LinkLeafNode {
 	
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt = new BTree(init);
+		BTree bt = new BTree(init, 1);
 		// BNode n = linkNodeN(null);
 		//BNode n = linkNodeN(bt.getRoot());
 		InnerLinkedList ll = new LinkLeafNode().new InnerLinkedList();
@@ -30,22 +30,19 @@ public class LinkLeafNode {
 		while(n != null || !st.isEmpty()) {
 			while(n != null) {
 				if(n.isLeaf()) {
-					if(start == null) {
+					if(start == null) 
 						start = n;
-					} else {
+					else 
 						cur.setRight(n);
-					}
 					cur = n;
 				}
-				if(n.getRight() != null) {
+				if(n.getRight() != null) 
 					st.push(n.getRight());
-				}
 				n = n.getLeft();
 			}// inner while
 			
-			if(!st.isEmpty()) {
+			if(!st.isEmpty()) 
 				n = st.pop();
-			}
 		} // while
 		
 		return start;
@@ -54,21 +51,18 @@ public class LinkLeafNode {
 	public static void linkNode(BNode root, InnerLinkedList ll) {
 		if(root != null) {
 			if(root.isLeaf()) {
-				if(ll.head == null) {
+				if(ll.head == null) 
 					ll.head = root;
-				} else {
+				else 
 					ll.tail.setRight(root);
-				}
 				ll.tail = root;
 			}
 			
-			if(root.getLeft() != null) {
+			if(root.getLeft() != null) 
 				linkNode(root.getLeft(), ll);
-			}
 			
-			if(root.getRight() != null) {
+			if(root.getRight() != null) 
 				linkNode(root.getRight(), ll);
-			}
 		}
 	}
 	

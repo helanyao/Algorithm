@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 
 //A comma expression "+(2,*(3,4))" is denoted as following:

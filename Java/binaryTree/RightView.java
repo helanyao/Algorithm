@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -8,13 +8,12 @@ import java.util.Queue;
 import binaryTree.BNode;
 import binaryTree.BTree;
 
-public class PrintRightView {
+public class RightView {
 
 	public static void main(String[] args) {
 		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt1 = new BTree(init1);
+		BTree bt1 = new BTree(init1, 1);
 		System.out.println(viewBFS(bt1.getRoot()));
-
 	}
 	
 	public static String viewBFS(BNode root) {
@@ -31,15 +30,12 @@ public class PrintRightView {
 			int size = qu.size();
 			while(size > 0) {
 				n = qu.poll();
-				if(n.hasLeft()) {
+				if(n.hasLeft()) 
 					qu.add(n.getLeft());
-				}
-				if(n.hasRight()) {
+				if(n.hasRight()) 
 					qu.add(n.getRight());
-				}
-				if(size == 1) {
+				if(size == 1) 
 					st.append(n.getVal());
-				}
 				size--;
 			}
 		}
@@ -54,18 +50,16 @@ public class PrintRightView {
 	}
 	
 	public static void helperDFS(BNode root, List<Integer> l, int level) {
-		if(root == null) {
+		if(root == null) 
 			return;
-		}
-		if(level < 0) {
-			throw new IllegalArgumentException("helperDFS: levle value is illegal.");
-		}
 		
-		if(level == l.size()) {
+		if(level < 0) 
+			throw new IllegalArgumentException("helperDFS: levle value is illegal.");
+		
+		if(level == l.size()) 
 			l.add(root.getVal());
-		}
+		
 		helperDFS(root.getLeft(), l, level + 1);
 		helperDFS(root.getRight(), l, level + 1);
 	}
-
 }

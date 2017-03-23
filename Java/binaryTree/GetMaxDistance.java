@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 import binaryTree.BNode;
 import binaryTree.BTree;
@@ -7,7 +7,7 @@ public class GetMaxDistance {
 
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "]"};	
-		BTree bt = new BTree(init);
+		BTree bt = new BTree(init, 1);
 		setDepth(bt.getRoot());
 		System.out.println(getMaxDistance(bt.getRoot()));
 		BNode root = create();

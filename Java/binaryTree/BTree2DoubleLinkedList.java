@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 import java.util.Stack;
 
@@ -20,7 +20,7 @@ public class BTree2DoubleLinkedList {
 
 	public static void main(String[] args) {
 		String[] init = new String[]{"4", "[", "2", "[", "1", ",", "3", "]", ",", "6", "[", "5", ",", "7", "]", "]"};	
-		BTree bt = new BTree(init);
+		BTree bt = new BTree(init, 1);
 		BNode head;
 //		head = btree2listN(bt.getRoot());
 //		for (int i = 0; i < init.length; i++) {

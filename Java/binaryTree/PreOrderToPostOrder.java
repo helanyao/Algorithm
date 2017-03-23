@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 // In a full binary tree, given its pre-order,
 // please calculate its post-order.

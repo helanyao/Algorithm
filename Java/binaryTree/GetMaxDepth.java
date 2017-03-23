@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -8,7 +8,6 @@ import binaryTree.BNode;
 import binaryTree.BTree;
 
 /**
- * 
  * @author jhzhu@outlook.com
  * 
  * @Description
@@ -28,7 +27,7 @@ public class GetMaxDepth {
 		 *   4     5  6
 		 */
 		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};
-		BTree bt = new BTree(init1);
+		BTree bt = new BTree(init1, 1);
 		
 		System.out.println(getDeepth(bt.getRoot()));
 		System.out.println(getDeepthN1(bt.getRoot()));

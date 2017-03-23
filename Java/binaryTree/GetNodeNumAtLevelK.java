@@ -1,4 +1,4 @@
-package BinaryTree;
+package binaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -10,15 +10,14 @@ public class GetNodeNumAtLevelK {
 
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt = new BTree(init);
+		BTree bt = new BTree(init, 1);
 		System.out.println(getNodeNumN(bt.getRoot(), 3));
 		System.out.println(getNodeNum(bt.getRoot(), 3));
 	}
 
 	public static int getNodeNumN(BNode root, int level) {
-		if (root == null || level <= 0) {
+		if (root == null || level <= 0) 
 			return -1;
-		}
 		
 		int curLevel = 0;
 		Queue<BNode> q = new LinkedList<BNode>();
@@ -27,18 +26,15 @@ public class GetNodeNumAtLevelK {
 		
 		while (!q.isEmpty()) {
 			curLevel++;
-			if (curLevel == level) {
+			if (curLevel == level) 
 				return q.size();
-			}
 			int length = q.size(); // important 
 			for (int i = 0; i < length; i++) { // important, as q is always changed
 				cur = q.poll();
-				if (cur.left != null) {
+				if (cur.left != null) 
 					q.offer(cur.left);
-				}
-				if (cur.right != null) {
+				if (cur.right != null) 
 					q.offer(cur.right);
-				}
 			}
 		}
 		
@@ -46,11 +42,10 @@ public class GetNodeNumAtLevelK {
 	}
 	
 	public static int getNodeNum(BNode root, int level) {
-        if (root == null || level <= 0) {
+        if (root == null || level <= 0) 
             return 0;
-        } else if (level == 1) {
+        else if (level == 1) 
             return 1;
-        }
         
         // 将左子树及右子树在K层的节点个数相加.
         return getNodeNum(root.left, level - 1) + getNodeNum(root.right, level - 1);
