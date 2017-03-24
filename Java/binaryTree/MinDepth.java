@@ -14,7 +14,7 @@ import binaryTree.BNode;
  *
  * @Tag Binary Tree, DFS
  */
-public class GetMinDepth {
+public class MinDepth {
 	/**
      * @param root: The root of binary tree.
      * @return: An integer.

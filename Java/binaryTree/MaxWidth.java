@@ -5,7 +5,7 @@ import java.util.Queue;
 
 import binaryTree.BNode;
 
-public class GetWidth {
+public class MaxWidth {
 	public int getWidth(BNode root) {
 		if(root == null) {
 			return 0;

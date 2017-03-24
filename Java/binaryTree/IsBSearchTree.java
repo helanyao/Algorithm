@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 import binaryTree.BNode;
 
-public class IsBinarySearchTree {
+public class IsBSearchTree {
 	BNode root;
 	
 	public static void main(String args[]){
-		IsBinarySearchTree tree = new IsBinarySearchTree();
+		IsBSearchTree tree = new IsBSearchTree();
         tree.root = new BNode(4);
         tree.root.left = new BNode(2);
         tree.root.right = new BNode(5);
