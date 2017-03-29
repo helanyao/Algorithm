@@ -16,27 +16,22 @@ There are two left leaves in the binary tree, with values 9 and 15 respectively.
 */
 
 public class GetLeftLeavesNum {
-	
-	public int sumOfLeftLeaves(TreeNode root) {
-        if(root == null || (root.left == null && root.right == null)) {
+	public int sumOfLeftLeaves(BNode root) {
+        if(root == null || (root.left == null && root.right == null)) 
             return 0;
-        } 
         
         int result = 0;
-        Stack<TreeNode> s = new Stack<TreeNode>();
-		TreeNode p = root;
+        Stack<BNode> s = new Stack<BNode>();
+		BNode p = root;
 		boolean right = false;
 		while(!s.isEmpty() || p != null) {
 			while(p != null) {
-			    if((p.left == null && p.right == null) && !right) {
+			    if((p.left == null && p.right == null) && !right) 
 			        result += p.val;
-			    }
-			    if(right) {
+			    if(right) 
 			        right = false;
-			    }
-				if(p.right != null) {
+				if(p.right != null) 
 					s.push(p.right);
-				}//if
 				p = p.left;
 			}//while
 			if(!s.isEmpty()) {
@@ -47,12 +42,4 @@ public class GetLeftLeavesNum {
 		
 		return result; 
     }
-
-}
-
-class TreeNode {
-	      int val;
-	      TreeNode left;
-	      TreeNode right;
-	      TreeNode(int x) { val = x; }
 }

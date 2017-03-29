@@ -1,6 +1,8 @@
-package binaryTree;
+package binaryTree.binarySearchTree;
 
 import java.util.Stack;
+import binaryTree.BNode;
+import binaryTree.BTree;
 
 /**
  * @author jhzhu@outlook.com
@@ -16,10 +18,10 @@ public class GetInorderSuccessorInBST {
 		String[] init = new String[]{"7","2","8","1","6","#","10","#","#","3","#","9","11","#","5","#","#","#","#","4"};
 		BTree bt = new BTree(init, 2);
 		BNode p = new BNode(3);
-		System.out.println(inorderSuccessor(bt.getRoot(), p)); // 4
+		System.out.println(inorderSuccessor1(bt.getRoot(), p)); // 4
 	}
 	
-	public static BNode inorderSuccessor(BNode root, BNode p) {
+	public static BNode inorderSuccessor1(BNode root, BNode p) {
         if (root == null || p == null)
             return null;
         
@@ -53,8 +55,8 @@ public class GetInorderSuccessorInBST {
     }
 	
 	// better solution
-	public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
-        TreeNode successor = null;
+	public BNode inorderSuccessor2(BNode root, BNode p) {
+        BNode successor = null;
         while (root != null && root.val != p.val) {
             if (root.val > p.val) {
                 successor = root;

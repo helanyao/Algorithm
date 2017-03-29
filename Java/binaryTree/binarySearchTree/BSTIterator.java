@@ -1,6 +1,8 @@
-package binaryTree;
+package binaryTree.binarySearchTree;
 
 import java.util.Stack;
+
+import binaryTree.BNode;
 
 /**
  * Design an iterator over a binary search tree with following rules:
