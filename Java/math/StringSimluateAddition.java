@@ -1,11 +1,11 @@
 package math;
 
 /**
- * @author jinghuaz
+ * @author jhzhu@outlook.com
  *
  * @Descritpion
- * 给定的两个字符串长度小于5000，只包含数字0-9，不包含任何前导0，不许使用任何的大整数计算库。计算和。
- * 
+ * Given two strings whose length is less than 5000. They only contain number 0-9 and does
+ * not include any 0 in the beginning position. Calculate their sum without using any math method.
  * @Example
  * Input: "5" and "619"
  * Output: "624"
