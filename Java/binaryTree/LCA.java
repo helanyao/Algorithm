@@ -7,11 +7,6 @@ import binaryTree.BNode;
 import binaryTree.BTree;
 
 /**
- * @author jinghuaz
- * 
- * @Description
- * The LCA is the node with largest depth which is the ancestor of both nodes.
- * 
  * @Tag LinkedIn, Binary Tree, Facebook
  */
 public class LCA {
@@ -19,40 +14,22 @@ public class LCA {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
 		BTree bt = new BTree(init, 1);
 		
-		System.out.println(getLCA(bt.getRoot(), 4, 3).getVal());
-		System.out.println(getLCANonRecru(bt.getRoot(), 4, 3).getVal());
+		System.out.println(getLCANonR(bt.getRoot(), 4, 3).getVal());
 		//getLCAByRMQ(bt.getRoot(), 4, 3);
 		System.out.println(getLCAByRMQ(bt.getRoot(), 4, 3).getVal());
+		
+		init = new String[]{"1","#","2","#","3","#","4","#","5"};
+		bt = new BTree(init, 2);
+		System.out.println(getLCANonR(bt.getRoot(), 3, 8) == null);
 	}
 	
 	/**
-     * @param root: The root of the binary search tree.
-     * @param i and j: two nodes in a Binary.
-     * @return: Return the least common ancestor(LCA) of the two nodes.
-     */
-	public static BNode getLCA(BNode root, int i, int j) {
-		if(root == null || root.getVal() == i || root.getVal() == j) 
-			return root;
-		
-		// Divide
-		BNode left = getLCA(root.getLeft(), i, j);
-		BNode right = getLCA(root.getRight(), i, j);
-		
-		// Conquer
-		if(left == null) 
-			return right;
-		if(right == null) 
-			return left;
-		
-		return root;
-	}
-	
-	/**
+	 * @author jhzhu@outlook.com
      * @param root: The root of the binary search tree.
      * @param a and b: two nodes in a Binary.
      * @return: Return the least common ancestor(LCA) of the two nodes.
      */
-	public static BNode getLCANonRecru(BNode root, int a, int b) {
+	public static BNode getLCANonR(BNode root, int a, int b) {
 		if(root == null) 
 			return null;
 		
@@ -101,6 +78,9 @@ public class LCA {
 				p = null;
 		}// out while
 		
+		if (aPath == null || bPath == null)
+			return null;
+		
 		for(i = 0; i < aPath.length && i < bPath.length; i++) 
 			if(aPath[i].getVal() != bPath[i].getVal()) 
 				break;
@@ -115,6 +95,7 @@ public class LCA {
 	// Assume the sub-array starts from s and ends in e,
 	// the node with the smallest depth in [s, e] is the LCA node.
 	/**
+	 * @author jhzhu@outlook.com
      * @param root: The root of the binary search tree.
      * @param a and b: two nodes in a Binary.
      * @return: Return the least common ancestor(LCA) of the two nodes.
@@ -199,5 +180,51 @@ public class LCA {
 		
 		return result;
 	}
-}
+	
+	/**
+     * @param root The root of the binary tree.
+     * @param A and B two nodes
+     * @return: Return the LCA of the two nodes.
+     */
+    public BNode getLCA(BNode root, BNode A, BNode B) {
+        ResultType rt = helper(root, A, B);
+        if (rt.a_exist && rt.b_exist)
+            return rt.node;
+        else
+            return null;
+    }
 
+    private ResultType helper(BNode root, BNode A, BNode B) {
+        if (root == null)
+            return new ResultType(false, false, null);
+            
+        ResultType left_rt = helper(root.left, A, B);
+        ResultType right_rt = helper(root.right, A, B);
+        
+        boolean a_exist = left_rt.a_exist || right_rt.a_exist || root == A;
+        boolean b_exist = left_rt.b_exist || right_rt.b_exist || root == B;
+        
+        if (root == A || root == B)
+            return new ResultType(a_exist, b_exist, root);
+
+        if (left_rt.node != null && right_rt.node != null)
+            return new ResultType(a_exist, b_exist, root);
+        if (left_rt.node != null)
+            return new ResultType(a_exist, b_exist, left_rt.node);
+        if (right_rt.node != null)
+            return new ResultType(a_exist, b_exist, right_rt.node);
+
+        return new ResultType(a_exist, b_exist, null);
+    }
+    
+    class ResultType {
+        public boolean a_exist, b_exist;
+        public BNode node;
+        
+        ResultType(boolean a, boolean b, BNode n) {
+            a_exist = a;
+            b_exist = b;
+            node = n;
+        }
+    }
+}
