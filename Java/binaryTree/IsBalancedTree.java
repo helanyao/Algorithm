@@ -57,13 +57,14 @@ public class IsBalancedTree {
         
         return Math.max(left, right) + 1;
     }
-}
-
-class ResultType {
-    public boolean isBalanced;
-    public int maxDepth;
-    public ResultType(boolean isBalanced, int maxDepth) {
-        this.isBalanced = isBalanced;
-        this.maxDepth = maxDepth;
+    
+    class ResultType {
+        public boolean isBalanced;
+        public int maxDepth;
+        public ResultType(boolean isBalanced, int maxDepth) {
+            this.isBalanced = isBalanced;
+            this.maxDepth = maxDepth;
+        }
     }
 }
+
