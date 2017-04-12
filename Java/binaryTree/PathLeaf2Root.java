@@ -8,6 +8,10 @@ import java.util.Stack;
 import binaryTree.BNode;
 import binaryTree.BTree;
 
+/**
+ * @Tag Binary Tree, Recursion, Divide and Conquer, Facebook, Google
+ *
+ */
 public class PathLeaf2Root {
 	public static void main(String [] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};		
