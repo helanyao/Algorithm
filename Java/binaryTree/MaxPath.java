@@ -12,7 +12,7 @@ package binaryTree;
  * 
  * @Tag Binary Tree, Divide and Conquer, DP, Recursion
  */
-public class MaxPath2 {
+public class MaxPath {
 	public static void main(String[] args) {
 		int[] max = new int[]{Integer.MIN_VALUE};
 		// case1

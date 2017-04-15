@@ -3,22 +3,25 @@ package binaryTree;
 import binaryTree.BNode;
 
 /**
- *  找出二叉树中最长连续子串
- *  即全部往左的连续节点，或是全部往右的连续节点
+ * @Description
+ * 找出二叉树中最长连续子串，要求全部往左的连续节点，或是全部往右的连续节点
  */
 
-public class GetLongestSequence {
-	
+public class LongestPath2 {
 	// For node n, firstly get the length for path1 and path2
 	// where path1 stands for the length of sequence when only traveling in left from n
 	// and paths means the right one.
 	// 
 	// After that, get the value of its children in recursive.
 	// In the end, find the max one among the 4 values;
+	/**
+	 * @author jhzhu@outlook.com
+	 * @param root node of binary tree
+	 * @return the length of longest path
+	 */
 	public int findLS1(BNode root) {
-		if (root == null) {
+		if (root == null) 
 			return 0;
-		}
 		
 		int curLeftLS = 0, curRightLS = 0, leftChildLS, rightChildLS, max;
 		BNode n = root.left;
