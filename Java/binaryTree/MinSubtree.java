@@ -60,7 +60,7 @@ public class MinSubtree {
 }
 
 //version 2: Pure divide conquer
-class Solution2 {
+class MinSubtreeSolution2 {
 	class ResultType {
 		 public BNode minSubtree;
 		 public int sum, minSum;

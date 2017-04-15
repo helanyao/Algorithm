@@ -56,7 +56,7 @@ public class LevelOrderTraversal {
 }
 
 //version 2:  DFS
-class Solution2 {
+class LevelOrderTraversalSolution2 {
 	public ArrayList<ArrayList<Integer>> levelOrder(BNode root) {
         ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
         
@@ -96,7 +96,7 @@ class Solution2 {
 }
 
 // version 3: two queues based BFS
-class Solution3 {
+class LevelOrderTraversalSolution3 {
 	public ArrayList<ArrayList<Integer>> levelOrder(BNode root) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) 
@@ -134,7 +134,7 @@ class Solution3 {
 }
 
 // version 4: BFS with dummy node
-class Solution4 {
+class LevelOrderTraversalSolution4 {
 	public ArrayList<ArrayList<Integer>> levelOrder(BNode root) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) 
