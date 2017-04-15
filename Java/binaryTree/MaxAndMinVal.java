@@ -2,7 +2,7 @@ package binaryTree;
 
 import binaryTree.BNode;
 
-public class GetMaxAndMinVal {
+public class MaxAndMinVal {
 	int getMaxVal(BNode root) {
 		if(root == null) {
 			throw new IllegalArgumentException();
