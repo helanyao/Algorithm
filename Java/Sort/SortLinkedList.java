@@ -1,7 +1,7 @@
 package Sort;
 
-import SingleLinkedList.LinkedList;
-import SingleLinkedList.ListNode;
+import singleLinkedList.LinkedList;
+import singleLinkedList.ListNode;
 
 public class SortLinkedList {
 	public static void main(String[] args) {

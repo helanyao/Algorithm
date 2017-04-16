@@ -1,6 +1,6 @@
 package LinkedList;
 
-import SingleLinkedList.ListNode;
+import singleLinkedList.ListNode;
 
 public class ReverseList {
 	public ListNode reverseListN(ListNode head) {

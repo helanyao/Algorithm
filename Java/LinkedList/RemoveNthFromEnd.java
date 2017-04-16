@@ -1,7 +1,7 @@
 package LinkedList;
 
-import SingleLinkedList.LinkedList;
-import SingleLinkedList.ListNode;
+import singleLinkedList.LinkedList;
+import singleLinkedList.ListNode;
 
 /*
  * Given a linked list, remove the nth node from the end of list and return its head.

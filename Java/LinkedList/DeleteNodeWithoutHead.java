@@ -1,7 +1,7 @@
 package LinkedList;
 
-import SingleLinkedList.LinkedList;
-import SingleLinkedList.ListNode;
+import singleLinkedList.LinkedList;
+import singleLinkedList.ListNode;
 
 /*
  * Write a function to delete a node (except the tail) in a singly linked list, 

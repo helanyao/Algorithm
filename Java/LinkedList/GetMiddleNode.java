@@ -1,6 +1,6 @@
 package LinkedList;
 
-import SingleLinkedList.ListNode;
+import singleLinkedList.ListNode;
 
 public class GetMiddleNode {
 	public ListNode findMiddle(ListNode head) {

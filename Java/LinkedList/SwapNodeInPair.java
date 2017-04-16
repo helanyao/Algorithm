@@ -1,7 +1,7 @@
 package LinkedList;
 
-import SingleLinkedList.LinkedList;
-import SingleLinkedList.ListNode;
+import singleLinkedList.LinkedList;
+import singleLinkedList.ListNode;
 
 /**
  * 
