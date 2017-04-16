@@ -19,7 +19,7 @@ public class SortLinkedList {
 		ListNode tmpH = null, cur = L.getHead();
 		LinkedList tmpL = new LinkedList(tmpH);
 		while(cur != null){
-			OrderInsertList(tmpL, cur.getValue());
+			OrderInsertList(tmpL, cur.val);
 			cur = cur.getNext();
 		}
 		
@@ -31,7 +31,7 @@ public class SortLinkedList {
 		ListNode prev = null, cur = L.getHead();
 
 	    while(cur != null){
-	        if(cur.getValue() > item){
+	        if(cur.val > item){
 	            break;
 	        }
 	        prev = cur;

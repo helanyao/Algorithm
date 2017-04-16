@@ -33,7 +33,7 @@ public class ReverseList {
 		      return;
 		  } else{
 		    reversePrint(head.getNext());
-		    System.out.println(head.getValue());
+		    System.out.println(head.val);
 		  }
 	}
 }
