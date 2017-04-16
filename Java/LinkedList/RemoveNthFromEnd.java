@@ -17,9 +17,9 @@ public class RemoveNthFromEnd {
 		LinkedList ll = new LinkedList(n1);
 		//ll.add(1);
 		//ll.add(3);
-		ll.printAll();
+		ll.print();
 		ll.head = removeEnd(ll.getHead(), 1);
-		ll.printAll();
+		ll.print();
 	}
 	
 	public static ListNode removeEnd(ListNode head, int n) {

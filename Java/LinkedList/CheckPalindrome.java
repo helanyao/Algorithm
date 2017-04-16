@@ -4,7 +4,6 @@ import singleLinkedList.LinkedList;
 import singleLinkedList.ListNode;
 
 public class CheckPalindrome {
-
 	public static void main(String[] args) {
 		ListNode n1 = new ListNode(0);
 		LinkedList ll = new LinkedList(n1);
@@ -12,15 +11,13 @@ public class CheckPalindrome {
 		ll.add(3);
 		ll.add(1);
 		ll.add(0);
-		ll.printAll();
-		
+		ll.print();
 	}
 	
 	// Time: O(n), Space: O(1)
 	public boolean isPalindrome(ListNode head) {
-		if(head == null) {
+		if(head == null) 
 			return true;
-		}
 		
 		ListNode middle = findMiddle(head);
 		middle.next = reverseList(middle.next);
@@ -38,9 +35,8 @@ public class CheckPalindrome {
 	}
 	
 	public ListNode findMiddle(ListNode head) {
-		if(head == null) {
+		if(head == null) 
 			return null;
-		}
 		
 		ListNode slow = head, fast = head.next;
         while (fast != null && fast.next != null) {
@@ -63,5 +59,4 @@ public class CheckPalindrome {
 		
 		return newH;
 	}
-
 }

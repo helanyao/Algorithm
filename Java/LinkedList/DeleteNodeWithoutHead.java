@@ -20,10 +20,10 @@ public class DeleteNodeWithoutHead {
 		ll.add(1);
 		ll.add(2);
 		//ll.add(3);
-		ll.printAll();
+		ll.print();
 		ListNode n = ll.head.next;
 		deleteNode(n);
-		ll.printAll();
+		ll.print();
 	}
 	
 	// test case: [1, 2, 3] remove 2; [1, 2] remove 1;

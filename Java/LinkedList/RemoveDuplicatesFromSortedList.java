@@ -10,9 +10,9 @@ public class RemoveDuplicatesFromSortedList {
 		ll.add(0);
 		ll.add(0);
 		//ll.add(3);
-		ll.printAll();
+		ll.print();
 		ll.head = deleteDuplicates(ll.getHead());
-		ll.printAll();
+		ll.print();
 	}
 	
     public static ListNode deleteDuplicates(ListNode head) {

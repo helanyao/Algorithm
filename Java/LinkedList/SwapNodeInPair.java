@@ -19,9 +19,9 @@ public class SwapNodeInPair {
       for (int i = 2; i < 8; i++) {
           l.add(i);
       }
-      l.printAll();
+      l.print();
       swapPairs(l.getHead());
-      l.printAll();
+      l.print();
   }
   
     public static ListNode swapPairs(ListNode head) {

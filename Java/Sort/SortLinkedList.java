@@ -12,7 +12,7 @@ public class SortLinkedList {
 		
 		LinkedList result = OrderLinkedList(L);
 		
-		result.printAll();
+		result.print();
 	}
 	
 	public static LinkedList OrderLinkedList(LinkedList L){
