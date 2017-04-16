@@ -2,7 +2,7 @@ package LinkedList;
 
 import SingleLinkedList.ListNode;
 
-public class MergeTwoLists {
+public class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
     	ListNode dummy = new ListNode(0);
     	ListNode lastNode = dummy;
