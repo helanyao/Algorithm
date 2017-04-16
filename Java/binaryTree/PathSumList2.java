@@ -27,7 +27,7 @@ import java.util.List;
  *
  * @Tag Binary Tree, DFS, Recursion
  */
-public class PathSumList {
+public class PathSumList2 {
 	/**
      * @param root the root of binary tree
      * @param target an integer
