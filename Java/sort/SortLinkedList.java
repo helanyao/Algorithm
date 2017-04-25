@@ -1,4 +1,4 @@
-package Sort;
+package sort;
 
 import singleLinkedList.LinkedList;
 import singleLinkedList.ListNode;
