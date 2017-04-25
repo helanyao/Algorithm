@@ -1,4 +1,4 @@
-package Strings;
+package string;
 
 
 //Intput string: "abcdefg".

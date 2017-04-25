@@ -1,4 +1,4 @@
-package Strings;
+package string;
 
 /*
  * For a given source string and a target string, 

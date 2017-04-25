@@ -1,4 +1,4 @@
-package Strings;
+package string;
 
 public class String2Int {
 	public int myAtoi(String str) {
