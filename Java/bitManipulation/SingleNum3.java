@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
  * @Description
  * Given 2*n + 2 numbers, every numbers occurs twice except two, find them.
  * 
