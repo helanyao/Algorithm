@@ -51,8 +51,8 @@ public class DoubleNum {
 	}
 	
 	/*
-	 * int型的最大值：2147483647    16进制：0x7FFF FFFF
-	 * int型的最小值：-2147483648   16进制：0x8000 0000
+	 * int型的最大值：2^{31} - 1 = 2147483647    16进制：0x7FFF FFFF
+	 * int型的最小值：-2^{31} = -2147483648   16进制：0x8000 0000
 	 */
 	private static int getMagicNum(int num) {
 		if (num == 0)
