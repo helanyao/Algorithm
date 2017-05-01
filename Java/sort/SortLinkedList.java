@@ -3,6 +3,7 @@ package sort;
 import singleLinkedList.ListNode;
 
 public class SortLinkedList {
+	// Time: O(n), Space: O(1)
 	public ListNode sort(ListNode head) {
 		if (head == null)
 			return head;
