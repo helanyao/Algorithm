@@ -1,49 +1,50 @@
 package sort;
 
-import singleLinkedList.LinkedList;
 import singleLinkedList.ListNode;
 
 public class SortLinkedList {
-	public static void main(String[] args) {
-		ListNode n1 = new ListNode(3);
-		LinkedList L = new LinkedList(n1);
-		L.add(0);
-		L.add(1);
+	public ListNode sort(ListNode head) {
+		if (head == null)
+			return head;
 		
-		LinkedList result = OrderLinkedList(L);
-		
-		result.print();
-	}
-	
-	public static LinkedList OrderLinkedList(LinkedList L){
-		ListNode tmpH = null, cur = L.getHead();
-		LinkedList tmpL = new LinkedList(tmpH);
-		while(cur != null){
-			OrderInsertList(tmpL, cur.val);
-			cur = cur.getNext();
+		ListNode newH = null, oldH = head;
+		while (oldH != null) {
+			ListNode n = oldH.next;
+			newH = insert(newH, oldH);
+			oldH = n;
 		}
 		
-		return tmpL;
+		return newH;
 	}
 	
-	public static void OrderInsertList(LinkedList L, int item){
-		ListNode newN = new ListNode(item);
-		ListNode prev = null, cur = L.getHead();
-
-	    while(cur != null){
-	        if(cur.val > item){
-	            break;
-	        }
-	        prev = cur;
-	        cur = cur.getNext();
-	    }
-
-	    if(prev == null){ //1. empty linked list; 2. inserted into head
-	        newN.setNext(L.getHead());
-	        L.setHead(newN);
-	    }else{
-	        prev.setNext(newN);
-	        newN.setNext(cur);
-	    }
+	private ListNode insert(ListNode head, ListNode n) {
+		if (n == null)
+			return null;
+		
+		if (head == null) {
+			head = n;
+			// key point: must take care of next field for each case
+			n.next = null; 
+			return head;
+		}
+		
+		ListNode pre = null, cur = head;
+		while (cur != null && cur.val < n.val) {
+			pre = cur;
+			cur = cur.next;
+		}
+		
+		if (pre == null) {
+			n.next = head;
+			head = n;
+		} else if (cur == null) {
+			n.next = null;
+			pre.next = n;
+		} else {
+			n.next = cur;
+			pre.next = n;
+		}
+		
+		return head;
 	}
 }
