@@ -1,5 +1,8 @@
 package binaryTree;
 
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
+
 /**
  * @Description
  * Find the max path sum. The path may start and end at any node.

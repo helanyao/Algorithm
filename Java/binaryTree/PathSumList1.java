@@ -2,6 +2,8 @@ package binaryTree;
 
 import java.util.ArrayList;
 
+import tree.binaryTree.BNode;
+
 /**
  * @Description
  * Find all paths that sum of the nodes in the path equals to a given number target.

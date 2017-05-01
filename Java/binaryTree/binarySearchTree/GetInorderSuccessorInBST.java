@@ -1,8 +1,9 @@
 package binaryTree.binarySearchTree;
 
 import java.util.Stack;
-import binaryTree.BNode;
-import binaryTree.BTree;
+
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
 
 /**
  * @author jhzhu@outlook.com

@@ -1,5 +1,8 @@
 package binaryTree;
 
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
+
 /**
  * @Description
  * Find the length of the longest consecutive sequence path.

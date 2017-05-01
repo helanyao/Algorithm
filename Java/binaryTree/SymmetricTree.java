@@ -3,9 +3,9 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import binaryTree.BNode;
-import binaryTree.BTree;
-import binaryTree.BTreeTraversal;
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeTraversal;
 
 //https://leetcode.com/problems/symmetric-tree/
 public class SymmetricTree {

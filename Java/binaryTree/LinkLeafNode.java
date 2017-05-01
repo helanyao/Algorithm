@@ -2,8 +2,8 @@ package binaryTree;
 
 import java.util.Stack;
 
-import binaryTree.BNode;
-import binaryTree.BTree;
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
 
 // Link all leaf nodes from left to right 
 // by using their right child.

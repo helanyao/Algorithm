@@ -1,5 +1,8 @@
 package binaryTree;
 
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
+
 /**
  * @Description
  * Find the subtree with minimum sum. Return the root of the subtree.

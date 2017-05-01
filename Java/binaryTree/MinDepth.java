@@ -2,10 +2,9 @@ package binaryTree;
 
 import java.util.Stack;
 
-import binaryTree.BNode;
+import tree.binaryTree.BNode;
 
 /**
- * 
  * @author jhzhu@outlook.com
  * 
  * @Description

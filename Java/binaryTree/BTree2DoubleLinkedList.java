@@ -2,8 +2,9 @@ package binaryTree;
 
 import java.util.Stack;
 
-import binaryTree.BNode;
-import binaryTree.BTree;
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
+
 
 /**
  *  For a given Binary Search Tree,

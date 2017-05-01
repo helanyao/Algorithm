@@ -1,6 +1,6 @@
 package binaryTree;
 
-import binaryTree.BNode;
+import tree.binaryTree.BNode;
 
 /*
  * Given a binary tree and a sum, 

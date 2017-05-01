@@ -1,7 +1,8 @@
 package binaryTree.binarySearchTree;
 
 import java.util.ArrayList;
-import binaryTree.BNode;
+
+import tree.binaryTree.BNode;
 
 /**
  * @Description

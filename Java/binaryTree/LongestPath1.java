@@ -3,6 +3,9 @@ package binaryTree;
 import java.util.Iterator;
 import java.util.Stack;
 
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
+
 /**
  * @author jhzhu@outlook.com
  * 

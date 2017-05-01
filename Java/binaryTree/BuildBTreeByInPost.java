@@ -1,6 +1,6 @@
 package binaryTree;
 
-import binaryTree.BNode;
+import tree.binaryTree.BNode;
 
 public class BuildBTreeByInPost {
 	BNode buildBTreeInPost(String[] in, int inSta, int inEnd, String[] post, int postSta, int postEnd) {

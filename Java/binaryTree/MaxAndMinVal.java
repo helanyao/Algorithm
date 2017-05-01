@@ -1,6 +1,6 @@
 package binaryTree;
 
-import binaryTree.BNode;
+import tree.binaryTree.BNode;
 
 public class MaxAndMinVal {
 	int getMaxVal(BNode root) {

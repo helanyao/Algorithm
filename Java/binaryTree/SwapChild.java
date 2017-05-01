@@ -1,8 +1,8 @@
 package binaryTree;
 
-import binaryTree.BNode;
-import binaryTree.BTree;
-import binaryTree.BTreeTraversal;
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeTraversal;
 
 // swap all left child nodes and right ones
 public class SwapChild {

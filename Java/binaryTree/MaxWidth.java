@@ -3,7 +3,7 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import binaryTree.BNode;
+import tree.binaryTree.BNode;
 
 public class MaxWidth {
 	public int getWidth(BNode root) {

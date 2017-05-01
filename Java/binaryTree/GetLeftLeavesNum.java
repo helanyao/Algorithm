@@ -2,6 +2,8 @@ package binaryTree;
 
 import java.util.Stack;
 
+import tree.binaryTree.BNode;
+
 /*
 Get the sum of all left leaves in a given binary tree.
 

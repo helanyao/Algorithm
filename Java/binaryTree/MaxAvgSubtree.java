@@ -1,5 +1,7 @@
 package binaryTree;
 
+import tree.binaryTree.BNode;
+
 /**
  * 
  * @Description
@@ -24,6 +26,7 @@ public class MaxAvgSubtree {
             this.size = size;
         }
     }
+	
 	private BNode subtree = null;
     private ResultType subtreeResult = null;
  

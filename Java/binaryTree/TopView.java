@@ -2,11 +2,10 @@ package binaryTree;
 
 import java.util.Stack;
 
-import binaryTree.BNode;
-import binaryTree.BTree;
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
 
 public class TopView {
-
 	public static void main(String[] args) {
 		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
 		BTree bt1 = new BTree(init1, 1);

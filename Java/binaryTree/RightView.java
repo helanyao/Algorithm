@@ -5,11 +5,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import binaryTree.BNode;
-import binaryTree.BTree;
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
 
 public class RightView {
-
 	public static void main(String[] args) {
 		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
 		BTree bt1 = new BTree(init1, 1);

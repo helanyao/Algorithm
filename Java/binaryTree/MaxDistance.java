@@ -1,10 +1,9 @@
 package binaryTree;
 
-import binaryTree.BNode;
-import binaryTree.BTree;
+import tree.binaryTree.BNode;
+import tree.binaryTree.BTree;
 
 public class MaxDistance {
-
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "]"};	
 		BTree bt = new BTree(init, 1);
