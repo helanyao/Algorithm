@@ -33,7 +33,7 @@ public class BT2LinkedList {
      * @param root the root of the binary tree
      * @return: nothing
      */
-    public void flatten(BNode root) {
+    public void flattenN(BNode root) {
         Stack<BNode> st = new Stack<BNode>();
         BNode cur = root, pre = null;
         
@@ -58,7 +58,7 @@ public class BT2LinkedList {
     }
     
  // version 2: Divide & Conquer
-    public void flattenDC(BNode root) {
+    public void flatten(BNode root) {
         helper(root);
     }
     
