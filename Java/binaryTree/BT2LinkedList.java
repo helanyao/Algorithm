@@ -25,23 +25,15 @@ import tree.binaryTree.BTreeHelper;
  *                        \
  *                         6
  * 
- * @Tag Binary Tree
+ * @Tag Binary Tree, Recursion
  */
 public class BT2LinkedList {
-	public static void main(String[] args) {
-		BTreeHelper helper = new BTreeHelper();
-		String[] init = new String[]{"1", "2", "5", "3", "4", "#", "6"};
-		BTree bt = new BTree(init, 2);
-		flatten(bt.getRoot());
-		helper.print(bt.getRoot());
-	}
-	
 	/**
 	 * @author jhzhu@outlook.com
-     * @param root: the root of the binary tree
+     * @param root the root of the binary tree
      * @return: nothing
      */
-    public static void flatten(BNode root) {
+    public void flatten(BNode root) {
         Stack<BNode> st = new Stack<BNode>();
         BNode cur = root, pre = null;
         
