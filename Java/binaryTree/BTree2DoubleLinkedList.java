@@ -1,9 +1,7 @@
 package binaryTree;
 
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
-import tree.binaryTree.BTree;
 
 
 /**
@@ -18,21 +16,6 @@ import tree.binaryTree.BTree;
  *  1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7
  */
 public class BTree2DoubleLinkedList {
-
-	public static void main(String[] args) {
-		String[] init = new String[]{"4", "[", "2", "[", "1", ",", "3", "]", ",", "6", "[", "5", ",", "7", "]", "]"};	
-		BTree bt = new BTree(init, 1);
-		BNode head;
-//		head = btree2listN(bt.getRoot());
-//		for (int i = 0; i < init.length; i++) {
-//			System.out.print(head.left.val + " " + head.right.val + "\n");
-//			head = head.right;
-//		}
-//		System.out.println();
-		btree2list(bt.getRoot());
-		System.out.println();
-	}
-	
     private static BNode previous;  
     public static void btree2list(BNode root){  
         if (root != null){  
@@ -46,31 +29,17 @@ public class BTree2DoubleLinkedList {
         }  
     }  
 	
-	private static void btree2listHelper(BNode cur, BNode pre, BNode head) {
-		if (cur == null) {
-			return;
-		}
-		btree2listHelper(cur.left, pre, head);
-		if (pre == null) {
-			head = cur;
-		} else {
-			pre.right = cur;
-			cur.left = pre;
-		}
-		pre = cur;
-		btree2listHelper(cur.right, pre, head);
-	}
 	
 	public static BNode btree2listN(BNode root) {
 		BNode head = new BNode(), pre = head;
 		Stack<BNode> st = new Stack<BNode>();
 		BNode cur = root;
+		
 		while (cur != null || !st.isEmpty()) {
 			while (cur != null) {
 				st.push(cur);
 				cur = cur.left;
 			}
-			
 			if (!st.isEmpty()) {
 				cur = st.pop();
 				pre.right = cur;
@@ -88,5 +57,4 @@ public class BTree2DoubleLinkedList {
 		}
 		return pre.right;
 	}
-
 }

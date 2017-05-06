@@ -1,7 +1,6 @@
 package binaryTree.binarySearchTree;
 
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
 
@@ -23,7 +22,8 @@ import tree.binaryTree.BTree;
 public class BST2DoublyLinkedList {
 	public static void main(String[] args) {
 		String[] init = new String[]{"4", "2", "5", "1", "3"};
-		BTree bt = new BTree(init, 2);
+		BTree bt = new BTree();
+		bt.create(init);
 		DoublyListNode h = bst2DoublyList(bt.getRoot());
 		while (h != null) {
 			System.out.print(h.val + " ");

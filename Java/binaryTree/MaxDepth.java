@@ -3,7 +3,6 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
 
@@ -26,8 +25,9 @@ public class MaxDepth {
 		 *    /   \    /
 		 *   4     5  6
 		 */
-		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};
-		BTree bt = new BTree(init1, 1);
+		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};
+		BTree bt = new BTree();
+		bt.create(init);
 		
 		System.out.println(getDeepth(bt.getRoot()));
 		System.out.println(getDeepthN1(bt.getRoot()));

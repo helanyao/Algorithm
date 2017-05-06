@@ -20,21 +20,22 @@ public class MaxPath {
 		int[] max = new int[]{Integer.MIN_VALUE};
 		// case1
 		String[] init = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
-		BTree bt = new BTree(init, 2);
+		BTree bt = new BTree();
+		bt.create(init);
 		int result = getMaxPath(bt.getRoot(), max); 
 		print(result, max); // 56
 		
 		max[0] = Integer.MIN_VALUE;
 		// case2
 		init = new String[]{"-1"};
-		bt = new BTree(init, 2);
+		bt.create(init);
 		result = getMaxPath(bt.getRoot(), max); 
 		print(result, max); // -1
 		
 		max[0] = Integer.MIN_VALUE;
 		// case3
 		init = new String[]{"1","2","-5","4","#","5","6"};
-		bt = new BTree(init, 2);
+		bt.create(init);
 		result = getMaxPath(bt.getRoot(), max); 
 		print(result, max); // 8
 	}

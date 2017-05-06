@@ -34,7 +34,8 @@ import tree.binaryTree.BTree;
 public class LongestConsecutiveSeq1 {
 	public static void main(String[] args) {
 		String[] init = new String[]{"2", "1", "3"};
-		BTree bt = new BTree(init, 2);
+		BTree bt = new BTree();
+		bt.create(init);
 		System.out.println(longestConsecutive(bt.getRoot()));
 	}
 	

@@ -2,7 +2,6 @@ package binaryTree;
 
 import java.util.ArrayList;
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
 
@@ -11,15 +10,9 @@ import tree.binaryTree.BTree;
  */
 public class LCA {
 	public static void main(String[] args) {
-		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt = new BTree(init, 1);
-		
-		System.out.println(getLCANonR(bt.getRoot(), 4, 3).getVal());
-		//getLCAByRMQ(bt.getRoot(), 4, 3);
-		System.out.println(getLCAByRMQ(bt.getRoot(), 4, 3).getVal());
-		
-		init = new String[]{"1","#","2","#","3","#","4","#","5"};
-		bt = new BTree(init, 2);
+		String[] init = new String[]{"1","#","2","#","3","#","4","#","5"};
+		BTree bt = new BTree();
+		bt.create(init);
 		System.out.println(getLCANonR(bt.getRoot(), 3, 8) == null);
 	}
 	
@@ -111,10 +104,6 @@ public class LCA {
 			public DNode(BNode n, int d) {
 				depth = d;
 				node = n;
-			}
-			
-			public void display() {
-				System.out.println(node.getVal() + " " + depth);
 			}
 		}
 		

@@ -4,26 +4,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
-import tree.binaryTree.BTree;
 
 /**
  * @Tag Binary Tree, Recursion, Divide and Conquer, Facebook, Google
  *
  */
 public class PathLeaf2Root {
-	public static void main(String [] args) {
-		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};		
-		BTree bt = new BTree(init, 1);
-		ArrayList<List<Integer>> results = getPathFromLeafToRoot1(bt.getRoot());
-		Iterator<List<Integer>> it = results.iterator();
-		System.out.println();
-		while (it.hasNext()) {
-			System.out.println(it.next().toString());
-		}
-	}
-	
 	// version 1: non-recursion
 	public static ArrayList<List<Integer>> getPathFromLeafToRoot1(BNode root) {
 		ArrayList<List<Integer>> results = new ArrayList<List<Integer>>();

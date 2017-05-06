@@ -1,7 +1,6 @@
 package binaryTree.binarySearchTree;
 
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
 
@@ -14,10 +13,11 @@ import tree.binaryTree.BTree;
  * 
  * @Tag Binary Search Tree
  */
-public class GetInorderSuccessorInBST {
+public class InorderSuccessor {
 	public static void main(String[] args) {
 		String[] init = new String[]{"7","2","8","1","6","#","10","#","#","3","#","9","11","#","5","#","#","#","#","4"};
-		BTree bt = new BTree(init, 2);
+		BTree bt = new BTree();
+		bt.create(init);
 		BNode p = new BNode(3);
 		System.out.println(inorderSuccessor1(bt.getRoot(), p)); // 4
 	}

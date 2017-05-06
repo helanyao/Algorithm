@@ -1,9 +1,7 @@
 package binaryTree;
 
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
-import tree.binaryTree.BTree;
 
 // Link all leaf nodes from left to right 
 // by using their right child.
@@ -11,16 +9,6 @@ public class LinkLeafNode {
 	class InnerLinkedList {
 		public BNode head = null;
 		public BNode tail = null;
-	}
-	
-	public static void main(String[] args) {
-		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt = new BTree(init, 1);
-		// BNode n = linkNodeN(null);
-		//BNode n = linkNodeN(bt.getRoot());
-		InnerLinkedList ll = new LinkLeafNode().new InnerLinkedList();
-		linkNode(bt.getRoot(), ll);
-		printLink(ll.head);
 	}
 	
 	public static BNode linkNodeN(BNode root) {

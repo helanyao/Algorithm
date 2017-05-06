@@ -9,32 +9,20 @@ import tree.binaryTree.BTreeTraversal;
 
 //https://leetcode.com/problems/symmetric-tree/
 public class SymmetricTree {
-	public static void main(String[] args) {
-		String[] init = new String[]{"1", "[", "2", "[", "3", ",", "]", ",", "3", "[", "2", ",", "]", "]"};
-		BTree bt = new BTree(init, 1);
-		BTreeTraversal tra = new BTreeTraversal();
-		tra.InOrder(bt.getRoot());	
-		System.out.println();
-		System.out.println(isSymmetric(bt.getRoot()));
-	}
-	
-	public static boolean isSymmetric(BNode root) {
+	public boolean isSymmetric(BNode root) {
         if(root==null) 
         	return true;
         
         return isSym(root.left,root.right);
     }
 	
-    public static boolean isSym(BNode left,BNode right){
+    public boolean isSym(BNode left,BNode right){
     	if (left==null && right==null) 
     		return true;
-    	
     	if (left!=null && right==null) 
     		return false;
-    	
     	if (left==null && right!=null) 
     		return false;
-    	
     	if (left.val != right.val) 
     		return false;
     	else 

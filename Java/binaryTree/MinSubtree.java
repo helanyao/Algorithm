@@ -22,7 +22,8 @@ public class MinSubtree {
 	private static BNode SUB_ROOT = null;
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "-5", "2", "0", "2", "-4", "-5"};
-		BTree bt = new BTree(init, 2);
+		BTree bt = new BTree();
+		bt.create(init);
 		System.out.println(findSubtree(bt.getRoot()).val);
 	}
 	

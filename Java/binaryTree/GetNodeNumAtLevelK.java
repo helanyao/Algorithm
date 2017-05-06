@@ -2,19 +2,9 @@ package binaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
 import tree.binaryTree.BNode;
-import tree.binaryTree.BTree;
 
 public class GetNodeNumAtLevelK {
-
-	public static void main(String[] args) {
-		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt = new BTree(init, 1);
-		System.out.println(getNodeNumN(bt.getRoot(), 3));
-		System.out.println(getNodeNum(bt.getRoot(), 3));
-	}
-
 	public static int getNodeNumN(BNode root, int level) {
 		if (root == null || level <= 0) 
 			return -1;

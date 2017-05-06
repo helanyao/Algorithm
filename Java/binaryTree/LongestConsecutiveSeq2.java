@@ -22,7 +22,8 @@ import tree.binaryTree.BTree;
 public class LongestConsecutiveSeq2 {
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "2", "0", "3"};
-		BTree bt = new BTree(init, 2);
+		BTree bt = new BTree();
+		bt.create(init);
 		System.out.println(longestSeq(bt.getRoot()));
 	}
 	

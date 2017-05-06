@@ -1,23 +1,9 @@
 package binaryTree;
 
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
-import tree.binaryTree.BTree;
 
-/**
- *  check whether BTree B is same with BTree A
- */
 public class IsSameBTree {
-	public static void main(String[] args) {
-		String[] init1 = new String[]{"1", "[", "2", "[", "5", ",", "]", "]"};	
-		String[] init2 = new String[]{"1", "[", "2", "[", "4", ",", "]", "]"};	
-		BTree bt1 = new BTree(init1, 1);
-		BTree bt2 = new BTree(init2, 1);
-		System.out.println(isSame(bt1.getRoot(), bt2.getRoot()));
-		System.out.println(isSameN(bt1.getRoot(), bt2.getRoot()));
-	}
-	
 	public static boolean isSame(BNode root1, BNode root2) {
 		if (root1 == null && root2 == null) 
 			return true;

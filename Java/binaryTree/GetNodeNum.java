@@ -1,18 +1,9 @@
 package binaryTree;
 
 import java.util.Stack;
-
 import tree.binaryTree.BNode;
-import tree.binaryTree.BTree;
 
 public class GetNodeNum {
-	public static void main(String[] args) {
-		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};
-		BTree bt = new BTree(init, 1);
-		System.out.println(getNodeNum(bt.getRoot()));
-		System.out.println(getNodeNumN(bt.getRoot()));
-	}
-	
 	public static int getNodeNum(BNode root) {
 		if (root == null)
 			return 0;

@@ -4,22 +4,15 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-
 import tree.binaryTree.BNode;
-import tree.binaryTree.BTree;
 
 public class RightView {
-	public static void main(String[] args) {
-		String[] init1 = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};	
-		BTree bt1 = new BTree(init1, 1);
-		System.out.println(viewBFS(bt1.getRoot()));
-	}
-	
 	public static String viewBFS(BNode root) {
 		if(root == null) {
-			System.out.println("RightView::viewBFS, empty input tree.");
+			System.out.println("Empty input tree.");
 			return null;
 		}
+		
 		Queue<BNode> qu = new LinkedList<BNode>();
 		StringBuilder st = new StringBuilder();
 		BNode n = root;
@@ -53,7 +46,7 @@ public class RightView {
 			return;
 		
 		if(level < 0) 
-			throw new IllegalArgumentException("helperDFS: levle value is illegal.");
+			throw new IllegalArgumentException("Levle value is illegal.");
 		
 		if(level == l.size()) 
 			l.add(root.getVal());
