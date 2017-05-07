@@ -3,10 +3,10 @@ package test.binaryTreeTest;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-
 import binaryTree.BT2LinkedList;
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeHelper;
 
 public class BT2LinkedListTest {
 	private static final String[] data = new String[]{"1","2","5","3","4"};
@@ -17,7 +17,8 @@ public class BT2LinkedListTest {
 	@Before
 	public void init() {
 		BTree t = new BTree();
-		t.create(data);
+		BTreeHelper h = new BTreeHelper();
+		t.root = h.create(data);
 		root = t.getRoot();
 	}
 

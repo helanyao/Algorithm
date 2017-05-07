@@ -3,6 +3,7 @@ package binaryTree.binarySearchTree;
 import java.util.Stack;
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeHelper;
 
 /**
  * @author jhzhu@outlook.com
@@ -17,7 +18,8 @@ public class InorderSuccessor {
 	public static void main(String[] args) {
 		String[] init = new String[]{"7","2","8","1","6","#","10","#","#","3","#","9","11","#","5","#","#","#","#","4"};
 		BTree bt = new BTree();
-		bt.create(init);
+		BTreeHelper h = new BTreeHelper();
+		bt.root = h.create(init);
 		BNode p = new BNode(3);
 		System.out.println(inorderSuccessor1(bt.getRoot(), p)); // 4
 	}

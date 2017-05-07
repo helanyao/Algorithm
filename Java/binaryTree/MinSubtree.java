@@ -2,6 +2,7 @@ package binaryTree;
 
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeHelper;
 
 /**
  * @Description
@@ -23,7 +24,8 @@ public class MinSubtree {
 	public static void main(String[] args) {
 		String[] init = new String[]{"1", "-5", "2", "0", "2", "-4", "-5"};
 		BTree bt = new BTree();
-		bt.create(init);
+		BTreeHelper h = new BTreeHelper();
+		bt.root = h.create(init);
 		System.out.println(findSubtree(bt.getRoot()).val);
 	}
 	

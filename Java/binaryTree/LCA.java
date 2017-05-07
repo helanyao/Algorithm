@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeHelper;
 
 /**
  * @Tag LinkedIn, Binary Tree, Facebook
@@ -12,7 +13,8 @@ public class LCA {
 	public static void main(String[] args) {
 		String[] init = new String[]{"1","#","2","#","3","#","4","#","5"};
 		BTree bt = new BTree();
-		bt.create(init);
+		BTreeHelper h = new BTreeHelper();
+		bt.root = h.create(init);
 		System.out.println(getLCANonR(bt.getRoot(), 3, 8) == null);
 	}
 	

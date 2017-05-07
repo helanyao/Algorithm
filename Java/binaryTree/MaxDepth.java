@@ -5,6 +5,7 @@ import java.util.Queue;
 import java.util.Stack;
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeHelper;
 
 /**
  * @author jhzhu@outlook.com
@@ -27,7 +28,8 @@ public class MaxDepth {
 		 */
 		String[] init = new String[]{"1", "[", "2", "[", "4", ",", "5", "]", ",", "3", "[", "6", ",", "]", "]"};
 		BTree bt = new BTree();
-		bt.create(init);
+		BTreeHelper h = new BTreeHelper();
+		bt.root = h.create(init);
 		
 		System.out.println(getDeepth(bt.getRoot()));
 		System.out.println(getDeepthN1(bt.getRoot()));

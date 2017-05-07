@@ -3,6 +3,7 @@ package binaryTree.binarySearchTree;
 import java.util.Stack;
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeHelper;
 
 /**
  * @Description
@@ -23,11 +24,12 @@ public class BST2DoublyLinkedList {
 	public static void main(String[] args) {
 		String[] init = new String[]{"4", "2", "5", "1", "3"};
 		BTree bt = new BTree();
-		bt.create(init);
-		DoublyListNode h = bst2DoublyList(bt.getRoot());
-		while (h != null) {
-			System.out.print(h.val + " ");
-			h = h.next;
+		BTreeHelper h = new BTreeHelper();
+		bt.root = h.create(init);
+		DoublyListNode list = bst2DoublyList(bt.getRoot());
+		while (list != null) {
+			System.out.print(list.val + " ");
+			list = list.next;
 		}		
 	}
 	

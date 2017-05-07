@@ -2,6 +2,7 @@ package binaryTree;
 
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeHelper;
 
 /**
  * @Description
@@ -35,7 +36,8 @@ public class LongestConsecutiveSeq1 {
 	public static void main(String[] args) {
 		String[] init = new String[]{"2", "1", "3"};
 		BTree bt = new BTree();
-		bt.create(init);
+		BTreeHelper h = new BTreeHelper();
+		bt.root = h.create(init);
 		System.out.println(longestConsecutive(bt.getRoot()));
 	}
 	

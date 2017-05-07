@@ -2,6 +2,7 @@ package binaryTree;
 
 import tree.binaryTree.BNode;
 import tree.binaryTree.BTree;
+import tree.binaryTree.BTreeHelper;
 
 /**
  * @Description
@@ -21,21 +22,22 @@ public class MaxPath {
 		// case1
 		String[] init = new String[]{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
 		BTree bt = new BTree();
-		bt.create(init);
+		BTreeHelper h = new BTreeHelper();
+		bt.root = h.create(init);
 		int result = getMaxPath(bt.getRoot(), max); 
 		print(result, max); // 56
 		
 		max[0] = Integer.MIN_VALUE;
 		// case2
 		init = new String[]{"-1"};
-		bt.create(init);
+		bt.root = h.create(init);
 		result = getMaxPath(bt.getRoot(), max); 
 		print(result, max); // -1
 		
 		max[0] = Integer.MIN_VALUE;
 		// case3
 		init = new String[]{"1","2","-5","4","#","5","6"};
-		bt.create(init);
+		bt.root = h.create(init);
 		result = getMaxPath(bt.getRoot(), max); 
 		print(result, max); // 8
 	}
