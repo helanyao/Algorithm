@@ -2,7 +2,7 @@ package linkedList;
 
 import singleLinkedList.ListNode;
 
-public class DetectCycle {
+public class HasCycle {
 	boolean hasCycle(ListNode head) {
 	    ListNode slow = head;
 	    ListNode fast = head;
