@@ -9,6 +9,7 @@ import tree.binaryTree.BTree;
 import tree.binaryTree.BTreeHelper;
 
 public class BT2LinkedListTest {
+	
 	private static final String[] data = new String[]{"1","2","5","3","4"};
 	private static final int[] result = new int[]{1,2,3,4,5};
 	private BNode root;
